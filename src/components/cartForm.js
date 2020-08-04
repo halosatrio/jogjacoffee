@@ -13,14 +13,14 @@ const CartForm = () => {
         <div className="text-center">
           <Button
             type="button"
-            className="btn btn-primary mb-2"
+            className="btn btn-primary mr-3"
             // onClick={handleCheckout}
           >
             CHECKOUT
           </Button>
           <Button
             type="button"
-            className="btn btn-outlineprimary btn-sm"
+            className="btn btn-outline-secondary"
             // onClick={clearCart}
           >
             CLEAR

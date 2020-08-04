@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import IcontText from "./common/iconText";
 import Button from "./common/button";
 
-import CartIcon from "../assets/icons";
+import { CartIcon } from "../assets/icons";
 
 class NavBar extends Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class NavBar extends Component {
     }
 
     return (
-      <nav className="navbar navbar-expand-lg navbar-light py-3">
+      <nav className="navbar sticky-top navbar-expand-lg bg-white shadow-sm navbar-light py-3">
         <div className="container">
           <IcontText />
           <button
@@ -61,14 +61,14 @@ class NavBar extends Component {
           </button>
           <div className={`${classOne}`} id="navbarResponsive">
             <ul className="navbar-nav ml-auto">
-              <li className={`nav-item${this.getNavLinkClass("/")}`}>
+              <li className={`nav-item${this.getNavLinkClass("/katalog")}`}>
                 <Button className="nav-link" type="link" href="/katalog">
                   Katalog
                 </Button>
               </li>
-              <li className={`nav-item${this.getNavLinkClass("/catalogue")}`}>
+              <li className={`nav-item${this.getNavLinkClass("/cart")}`}>
                 <Button className="nav-link" type="link" href="/cart">
-                  <CartIcon />
+                  <CartIcon width={"18px"} />
                   Keranjang
                 </Button>
               </li>

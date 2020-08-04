@@ -1,6 +1,5 @@
 import React from "react";
 
-import IconText from "./iconText";
 import Button from "./common/button";
 
 const Footer = () => {
@@ -8,8 +7,8 @@ const Footer = () => {
     <footer>
       <div className="container my-4">
         <div className="row">
-          <div className="col-sm-4 mb-4 text-center text-md-left">
-            <IconText />
+          <div className="col-sm-4 mb-4 text-center text-sm-left">
+            <h6 className="mt-2">Ngopi di Jogja</h6>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
                 <Button type="link" href="/register">

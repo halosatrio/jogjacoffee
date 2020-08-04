@@ -1,30 +1,30 @@
 import React from "react";
-import {
-  PlusCircleIconcon,
-  MinusCircleIcon,
-  TrashIcon,
-} from "./../assets/icons/index";
+import { PlusCircleIcon } from "../assets/icons";
 
 const CartItem = () => {
   return (
     <div className="card card-body border-0">
       <div className="row no-gutters py-2">
         <div className="col-sm-2 p-2">
-          <img />
+          <img
+            src="/images/blanco1.jpg"
+            alt="blanco1"
+            style={{ margin: "0 auto", maxHeight: "100px" }}
+          />
         </div>
         <div className="col-sm-4 p-2">
-          <h5 className="mb-1">Nama Produk</h5>
-          <p className="mb-1">Price: harga produk </p>
+          <h5 className="mb-1">{`Nama Produk`}</h5>
+          <p className="mb-1">{`Price: harga produk`}</p>
         </div>
         <div className="col-sm-2 p-2 text-center ">
-          <p className="mb-0">Qty: jumlah beli</p>
+          <p className="mb-0">{`Qty: jumlah beli`}</p>
         </div>
         <div className="col-sm-4 p-2 text-right">
           <button
             // onClick={() => increase(product)}
             className="btn btn-primary btn-sm mr-2 mb-1"
           >
-            <PlusCircleIconcon width={"20px"} />
+            <PlusCircleIcon width={"20px"} />
           </button>
 
           {/* {product.quantity > 1 && (

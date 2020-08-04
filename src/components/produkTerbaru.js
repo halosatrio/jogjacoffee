@@ -1,32 +1,35 @@
 import React from "react";
+import Button from "./common/button";
 
-const ProdukTerbaru = () => {
+const ProdukTerbaru = ({ items }) => {
   return (
-    <section className="brands bg-white shadow-sm p-3 mb-5">
-      <div className="container text-center">
-        <div
-          className="row mb-3 justify-content-center"
-          style={{ width: "100%" }}
-        >
-          <h2 className="text-center">Produk Terbaru</h2>
-        </div>
-        <div className="row row-cols-sm-2 row-cols-md-4 mb-3">
-          <div className="card text-center" style={{ width: "18rem" }}>
-            <img src="..." class="card-img-top" alt="..." />
-            <div className="card-body">
-              <h5 className="card-title">Special title treatment</h5>
-              <p className="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
-              </p>
-              {/* <a href="#" className="btn btn-primary"> */}
-              Go somewhere
-              {/* </a> */}
+    <>
+      <h2 className="text-left mb-4">Produk Pilihan</h2>
+      <div className="row">
+        {items.map((item) => (
+          <div key={item._id} className="col-6 col-lg-3 card-group">
+            <div className="card text-center mb-4">
+              <Button type="link" to="/">
+                <img
+                  src={item.imageUrl}
+                  className="card-img-top"
+                  alt={item.name}
+                />
+              </Button>
+              <div className="card-body">
+                <p className="card-text">{item.name}</p>
+                <small class="text-muted align-bottom">{`Berat: ${item.weight}`}</small>
+              </div>
+              <div class="card-footer">
+                <Button className="btn btn-info" type="button" isBlock>
+                  + Beli
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </>
   );
 };
 
