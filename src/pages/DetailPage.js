@@ -31,6 +31,7 @@ class DetailPage extends Component {
     const coffeeId = this.props.match.params.id;
 
     const coffee = getCoffee(coffeeId);
+    if (!coffee) return this.props.history.replace("/not-found");
 
     this.setState({ data: this.mapToViewModel(coffee) });
   }
