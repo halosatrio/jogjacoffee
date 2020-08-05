@@ -12,6 +12,11 @@ import { getRecommended, getPilihan, getTerbaru } from "../services/coffee";
 import { getPartner } from "./../services/partner";
 
 class StorePage extends Component {
+  constructor(props) {
+    super(props);
+    this.refRekomendasi = React.createRef();
+  }
+
   state = {
     recommended: getRecommended(),
     pilihan: getPilihan(),
@@ -29,11 +34,14 @@ class StorePage extends Component {
     return (
       <>
         <NavBar {...this.props} />
-        <Jumbotron />
+        <Jumbotron refRekomendasi={this.refRekomendasi} />
         <BannerPartner items={partner} />
         <section class="featured shadow-sm bg-white p-3 mx-5">
           <div class="container">
-            <ProdukRekomendasi items={recommended} />
+            <ProdukRekomendasi
+              refRekomendasi={this.refRekomendasi}
+              items={recommended}
+            />
             <ProdukTerbaru items={terbaru} />
             <ProdukPilihan items={pilihan} />
           </div>

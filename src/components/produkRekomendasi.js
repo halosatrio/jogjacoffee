@@ -1,9 +1,14 @@
 import React from "react";
+
 import Button from "./common/button";
 
-const ProdukRekomendasi = ({ items }) => {
+import { formatNumber } from "./../utils/numberFormat";
+
+const ProdukRekomendasi = (props) => {
+  const { items } = props;
+
   return (
-    <>
+    <section ref={props.refRekomendasi}>
       <h2 className="text-left  ml-sm-5 ml-md-4 ml-lg-0 mb-4">
         Produk Rekomendasi
       </h2>
@@ -26,6 +31,7 @@ const ProdukRekomendasi = ({ items }) => {
                 <small class="text-muted align-bottom">{`Berat: ${item.weight}`}</small>
               </div>
               <div class="card-footer">
+                <p className="font-weight-bolder">{formatNumber(item.price)}</p>
                 <Button className="btn btn-info" type="button" isBlock>
                   + Beli
                 </Button>
@@ -34,7 +40,7 @@ const ProdukRekomendasi = ({ items }) => {
           </div>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

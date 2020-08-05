@@ -2,19 +2,30 @@ import React from "react";
 
 import Button from "./common/button";
 
-const Jumbotron = () => {
+const Jumbotron = (props) => {
+  function showRekomendasi() {
+    window.scrollTo({
+      top: props.refRekomendasi.current.offsetTop - 90,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
-        <h1 className="font-weight-bold line-height-1">
-          Perpustakaan Kolektif dan <br /> Media Literasi.
-        </h1>
-        <p className="lead my-4">
-          An easy-to-access library within the grasp of your hand, where
-          everyone can borrow and lend their favorite books.
+        <h1 className="font-weight-bold line-height-1">Ngopi di Jogja</h1>
+        <p className="lead my-5">
+          Ajang pertemuan bagi pelaku industri kopi dan penikmat kopi di wilayah
+          Yogyakarta
         </p>
-        <Button type="button" className="btn px-5 button" hasShadow isPrimary>
-          Pinjam Buku
+        <Button
+          type="button"
+          onClick={showRekomendasi}
+          className="btn px-5 button"
+          hasShadow
+          isPrimary
+        >
+          Lihat Produk
         </Button>
       </div>
     </div>

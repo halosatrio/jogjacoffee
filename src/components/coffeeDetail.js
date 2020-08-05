@@ -1,62 +1,56 @@
 import React from "react";
 
-import { formatNumber } from "./../utils/numberFormat";
-
-const CoffeeDetail = ({ data }) => {
-  console.log(data.extras);
+const CoffeeDetail = (props) => {
+  const { data } = props;
   return (
-    <>
+    <div className="col-md-8" ref={props.refInfoProduk}>
       <h3 className="mb-4 text-gray-800">Detail Produk</h3>
-      <table className="table">
+      <table className="table table-borderless table-sm">
         <tbody>
           <tr>
-            <th>Kopi</th>
+            <td>Kopi</td>
             <td>{data.name}</td>
           </tr>
           <tr>
-            <th>Berat</th>
+            <td>Berat</td>
             <td>{data.weight}</td>
           </tr>
           {data.extras ? (
             <tr>
-              <th>Deskripsi</th>
+              <td>Deskripsi</td>
               <td>{data.extras}</td>
             </tr>
           ) : (
             <>
               <tr>
-                <th>Origin</th>
+                <td>Origin</td>
                 <td>{data.description.origin}</td>
               </tr>
               <tr>
-                <th>Altitude</th>
+                <td>Altitude</td>
                 <td>{data.description.altitude}</td>
               </tr>
               <tr>
-                <th>Varietasi</th>
+                <td>Varietasi</td>
                 <td>{data.description.varietas}</td>
               </tr>
               <tr>
-                <th>Process</th>
+                <td>Process</td>
                 <td>{data.description.process}</td>
               </tr>
               <tr>
-                <th>Roasting</th>
+                <td>Roasting</td>
                 <td>{data.description.roasting}</td>
               </tr>
               <tr>
-                <th>Tasting Notes</th>
+                <td>Tasting Notes</td>
                 <td>{data.description.notes}</td>
               </tr>
             </>
           )}
-          <tr>
-            <th>Harga</th>
-            <td>{formatNumber(data.price)}</td>
-          </tr>
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 

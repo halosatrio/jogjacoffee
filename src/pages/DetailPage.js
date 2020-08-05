@@ -4,6 +4,7 @@ import NavBar from "./../components/navBar";
 import Footer from "../components/footer";
 import CoffeeImage from "../components/coffeeImage";
 import CoffeeDetail from "../components/coffeeDetail";
+import CoffeeBeli from "../components/coffeeBeli";
 
 import { getCoffee } from "./../services/coffee";
 
@@ -20,6 +21,9 @@ class DetailPage extends Component {
       imageUrl: "",
     },
   };
+
+  refInfoProduk = React.createRef();
+
   componentDidMount() {
     window.title = "Ngopi di Jogja | Detail Produk";
     window.scrollTo(0, 0);
@@ -50,15 +54,17 @@ class DetailPage extends Component {
     return (
       <>
         <NavBar {...this.props} />
-        <section className="container mb-5">
+        <section className="container my-5">
           <div className="row justify-content-around">
             <div className="col-10 col-md-6 col-lg-6 col-xl-5 mb-4">
               <CoffeeImage data={data} />
             </div>
-            <div className="deskripsi-buku col-11 col-md-6 col-lg-6 col-xl-5">
-              <CoffeeDetail data={data} />
+            <div className="deskripsi-kopi col-11 col-md-6 col-lg-6 col-xl-5">
+              <CoffeeBeli data={data} refInfoProduk={this.refInfoProduk} />
             </div>
           </div>
+          <CoffeeDetail data={data} refInfoProduk={this.refInfoProduk} />
+          <hr />
         </section>
         <Footer />
       </>
