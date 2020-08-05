@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import StorePage from "./pages/StorePage";
 import AboutPage from "./pages/AboutPage";
@@ -18,7 +18,8 @@ function App() {
       <Route exact path="/cart" component={CartPage} />
       <Route exact path="/katalog" component={KatalogPage} />
       <Route exact path="/coffee/:id" component={DetailPage}></Route>
-      {/* <Route path="*" component={NotFound} /> */}
+      <Route path="/not-found" component={NotFound}></Route>
+      <Redirect to="/not-found" />
     </Router>
   );
 }

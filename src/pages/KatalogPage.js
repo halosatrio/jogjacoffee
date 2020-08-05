@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import NavBar from "./../components/navBar";
-import Footer from "./../components/footer";
+import NavBar from "../components/common/navBar";
+import Footer from "../components/common/footer";
 import ItemsProduct from "../components/ItemsProduct";
-import { getCoffees } from "./../services/coffee";
+import { getCoffees } from "../services/coffee";
 
 class KatalogPage extends Component {
   state = {

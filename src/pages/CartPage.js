@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import NavBar from "./../components/navBar";
-import CartForm from "./../components/cartForm";
-import CartItem from "./../components/cartItem";
+import NavBar from "../components/common/navBar";
+import CartForm from "../components/cartForm";
+import CartItem from "../components/cartItem";
 
 class CartPage extends Component {
   componentDidMount() {

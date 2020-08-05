@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
-import NavBar from "./../components/navBar";
-import Footer from "../components/footer";
+import NavBar from "../components/common/navBar";
+import Footer from "../components/common/footer";
 import CoffeeImage from "../components/coffeeImage";
 import CoffeeDetail from "../components/coffeeDetail";
 import CoffeeBeli from "../components/coffeeBeli";
 
-import { getCoffee } from "./../services/coffee";
+import { getCoffee } from "../services/coffee";
 
 class DetailPage extends Component {
   state = {

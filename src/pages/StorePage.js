@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import NavBar from "../components/navBar";
-import Footer from "../components/footer";
+import NavBar from "../components/common/navBar";
+import Footer from "../components/common/footer";
 import BannerPartner from "./../components/bannerPartner";
 import ProdukTerbaru from "../components/produkTerbaru";
 import ProdukRekomendasi from "./../components/produkRekomendasi";
@@ -9,7 +9,7 @@ import ProdukPilihan from "./../components/produkPilihan";
 import Jumbotron from "./../components/jumbotron";
 
 import { getRecommended, getPilihan, getTerbaru } from "../services/coffee";
-import { getPartner } from "./../services/partner";
+import { getPartner } from "../services/partner";
 
 class StorePage extends Component {
   constructor(props) {
