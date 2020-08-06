@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import StorePage from "./pages/StorePage";
-import AboutPage from "./pages/AboutPage";
+// import AboutPage from "./pages/AboutPage";
 import CartPage from "./pages/CartPage";
 import KatalogPage from "./pages/KatalogPage";
 import NotFound from "./pages/NotFound";

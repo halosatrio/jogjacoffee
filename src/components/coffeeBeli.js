@@ -15,7 +15,7 @@ const CoffeeBeli = (props) => {
   const { data } = props;
 
   return (
-    <div className="card px-4 mb-5">
+    <div className="card p-4 mb-5">
       <div className="card-body">
         <h4 class="card-title mb-3">{data.name}</h4>
         <h6 class="card-subtitle text-muted">Berat bersih: {data.weight}</h6>

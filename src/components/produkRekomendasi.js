@@ -2,8 +2,6 @@ import React from "react";
 
 import Button from "./common/button";
 
-import { formatNumber } from "./../utils/numberFormat";
-
 const ProdukRekomendasi = (props) => {
   const { items } = props;
 
@@ -19,21 +17,24 @@ const ProdukRekomendasi = (props) => {
             className="col-sm-11 col-md-6 col-lg-4 offset-lg-0 card-deck"
           >
             <div className="card text-center mb-4">
-              <Button type="link" href={`/coffee/${item._id}`}>
-                <img
-                  src={item.imageUrl}
-                  className="card-img-top"
-                  alt={item.name}
-                />
-              </Button>
+              <img
+                src={item.imageUrl}
+                className="card-img-top"
+                alt={item.name}
+              />
+
               <div className="card-body">
                 <p className="card-text">{item.name}</p>
                 <small class="text-muted align-bottom">{`Berat: ${item.weight}`}</small>
               </div>
               <div class="card-footer">
-                <p className="font-weight-bolder">{formatNumber(item.price)}</p>
-                <Button className="btn btn-info" type="button" isBlock>
-                  + Beli
+                <Button
+                  className="btn btn-info stretched-link"
+                  type="link"
+                  href={`/coffee/${item._id}`}
+                  isBlock
+                >
+                  Detail Produk
                 </Button>
               </div>
             </div>

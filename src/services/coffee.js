@@ -1,4 +1,4 @@
-const coffees = [
+export const coffees = [
   {
     _id: "blanco-1",
     name: "Arundaya Double Wash",
@@ -665,10 +665,6 @@ const coffees = [
     imageUrl: "/images/space5.jpg",
   },
 ];
-
-export function getCoffees() {
-  return coffees;
-}
 
 export function getCoffee(id) {
   return coffees.find((c) => c._id === id);

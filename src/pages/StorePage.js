@@ -9,7 +9,7 @@ import ProdukPilihan from "./../components/produkPilihan";
 import Jumbotron from "./../components/jumbotron";
 
 import { getRecommended, getPilihan, getTerbaru } from "../services/coffee";
-import { getPartner } from "../services/partner";
+import { partner } from "../services/partner";
 
 class StorePage extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class StorePage extends Component {
     recommended: getRecommended(),
     pilihan: getPilihan(),
     terbaru: getTerbaru(),
-    partner: getPartner(),
+    partner,
   };
 
   componentDidMount() {

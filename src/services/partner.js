@@ -40,7 +40,3 @@ export const partner = [
     imageUrl: "/images/logo-imba.jpg",
   },
 ];
-
-export function getPartner() {
-  return partner.filter((p) => p);
-}
