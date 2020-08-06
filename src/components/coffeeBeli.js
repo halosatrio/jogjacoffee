@@ -17,8 +17,10 @@ const CoffeeBeli = (props) => {
   return (
     <div className="card p-4 mb-5">
       <div className="card-body">
-        <h4 class="card-title mb-3">{data.name}</h4>
-        <h6 class="card-subtitle text-muted">Berat bersih: {data.weight}</h6>
+        <h4 className="card-title mb-3">{data.name}</h4>
+        <h6 className="card-subtitle text-muted">
+          Berat bersih: {data.weight}
+        </h6>
         <Button
           type="button"
           onClick={showInfoProduk}

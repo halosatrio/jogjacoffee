@@ -18,9 +18,9 @@ const produkPilihan = ({ items }) => {
 
               <div className="card-body">
                 <p className="card-text">{item.name}</p>
-                <small class="text-muted align-bottom">{`Berat: ${item.weight}`}</small>
+                <small className="text-muted align-bottom">{`Berat: ${item.weight}`}</small>
               </div>
-              <div class="card-footer">
+              <div className="card-footer">
                 <Button
                   className="btn btn-info stretched-link"
                   type="link"

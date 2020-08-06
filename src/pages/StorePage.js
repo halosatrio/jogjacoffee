@@ -36,8 +36,8 @@ class StorePage extends Component {
         <NavBar {...this.props} />
         <Jumbotron refRekomendasi={this.refRekomendasi} />
         <BannerPartner items={partner} />
-        <section class="featured shadow-sm bg-white p-3 mx-5">
-          <div class="container">
+        <section className="featured shadow-sm bg-white p-3 mx-5">
+          <div className="container">
             <ProdukRekomendasi
               refRekomendasi={this.refRekomendasi}
               items={recommended}

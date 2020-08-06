@@ -1,83 +1,76 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
 import IcontText from "./iconText";
 import Button from "./button";
 
 import { CartIcon } from "../../assets/icons";
 
-class NavBar extends Component {
-  constructor(props) {
-    super(props);
-    this.toggleNavbar = this.toggleNavbar.bind(this);
-    this.state = {
-      collapsed: true,
-    };
-  }
+const NavBar = (props) => {
+  const [collapsed, setCollapsed] = useState(true);
 
-  toggleNavbar() {
-    this.setState({
-      collapsed: !this.state.collapsed,
+  const toggleNavbar = () => {
+    setCollapsed({
+      collapsed: !collapsed,
     });
-  }
-
-  getNavLinkClass = (path) => {
-    return this.props.location.pathname === path ? " active" : "";
   };
 
-  render() {
-    const collapsed = this.state.collapsed;
-    const classOne = collapsed
-      ? "collapse navbar-collapse"
-      : "collapse navbar-collapse show";
-    const classTwo = collapsed
-      ? "navbar-toggler navbar-toggler-right collapsed"
-      : "navbar-toggler navbar-toggler-right";
+  const getNavLinkClass = (path) => {
+    return props.path === path ? " active" : "";
+  };
 
-    if (this.props.isCentered) {
-      return (
-        <nav className="navbar navbar-expand-lg navbar-light py-3">
-          <div className="container">
-            <IcontText className="mx-auto" />
-          </div>
-        </nav>
-      );
-    }
+  const classOne = collapsed
+    ? "collapse navbar-collapse"
+    : "collapse navbar-collapse show";
+  const classTwo = collapsed
+    ? "navbar-toggler navbar-toggler-right collapsed"
+    : "navbar-toggler navbar-toggler-right";
 
+  if (props.isCentered) {
     return (
-      <nav className="navbar sticky-top navbar-expand-lg bg-white shadow-sm navbar-light py-3">
+      <nav className="navbar navbar-expand-lg navbar-light py-3">
         <div className="container">
-          <IcontText />
-          <button
-            onClick={this.toggleNavbar}
-            className={`${classTwo}`}
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarResponsive"
-            aria-controls="navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className={`${classOne}`} id="navbarResponsive">
-            <ul className="navbar-nav ml-auto">
-              <li className={`nav-item${this.getNavLinkClass("/katalog")}`}>
-                <Button className="nav-link" type="link" href="/katalog">
-                  Katalog
-                </Button>
-              </li>
-              <li className={`nav-item${this.getNavLinkClass("/cart")}`}>
-                <Button className="nav-link" type="link" href="/cart">
-                  <CartIcon width={"18px"} />
-                  Keranjang
-                </Button>
-              </li>
-            </ul>
-          </div>
+          <IcontText className="mx-auto" />
         </div>
       </nav>
     );
   }
-}
+
+  console.log("path from navbar", props.path);
+
+  return (
+    <nav className="navbar sticky-top navbar-expand-lg bg-white shadow-sm navbar-light py-3">
+      <div className="container">
+        <IcontText />
+        <button
+          onClick={toggleNavbar}
+          className={`${classTwo}`}
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon" />
+        </button>
+        <div className={`${classOne}`} id="navbarResponsive">
+          <ul className="navbar-nav ml-auto">
+            <li className={`nav-item${getNavLinkClass("/katalog")}`}>
+              <Button className="nav-link" type="link" href="/katalog">
+                Katalog
+              </Button>
+            </li>
+            <li className={`nav-item${getNavLinkClass("/cart")}`}>
+              <Button className="nav-link" type="link" href="/cart">
+                <CartIcon width={"18px"} />
+                Keranjang
+              </Button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 export default NavBar;
