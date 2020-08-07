@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import IcontText from "./iconText";
 import Button from "./button";
 
 import { CartIcon } from "../../assets/icons";
+import { CartContext } from "../../context/CartContext";
 
 const NavBar = (props) => {
+  const { itemCount } = useContext(CartContext);
+
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => {
@@ -63,7 +66,7 @@ const NavBar = (props) => {
             <li className={`nav-item${getNavLinkClass("/cart")}`}>
               <Button className="nav-link" type="link" href="/cart">
                 <CartIcon width={"18px"} />
-                Keranjang
+                Keranjang ({itemCount})
               </Button>
             </li>
           </ul>

@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -17,13 +16,18 @@ const KatalogPage = (props) => {
   const { products } = useContext(ProductsContext);
 
   const pathName = props.location.pathname;
-  console.log("path from katalogPage", pathName);
 
   return (
     <>
       <NavBar path={pathName} />
       <TitleText className="mt-5">Katalog Kopi Pilihan</TitleText>
-      <ItemsProduct product={products} />
+      <section className="container my-5">
+        <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 mb-3">
+          {products.map((product) => (
+            <ItemsProduct key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
       <Footer />
     </>
   );

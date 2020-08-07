@@ -13,48 +13,44 @@ const ItemsProduct = ({ product }) => {
   };
 
   return (
-    <section className="container my-5">
-      <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 mb-3">
-        {product.map((item) => (
-          <div key={item._id} className="col mb-4">
-            <div className="card text-center h-100">
-              <Button type="link" href={`/coffee/${item._id}`}>
-                <img
-                  src={item.imageUrl}
-                  className="card-img-top"
-                  alt={item.name}
-                />
-              </Button>
-              <div className="card-body">
-                <p className="card-text">{item.name}</p>
-                <small className="text-muted align-bottom">{`Berat: ${item.weight}`}</small>
-              </div>
-              <div className="card-footer">
-                <p>{formatNumber(item.price)}</p>
+    <div className="col mb-4">
+      <div className="card text-center h-100">
+        <Button type="link" href={`/coffee/${product._id}`}>
+          <img
+            src={product.imageUrl}
+            className="card-img-top"
+            alt={product.name}
+          />
+        </Button>
+        <div className="card-body">
+          <p>{product.name}</p>
+          <small className="text-muted align-bottom">{`Berat: ${product.weight}`}</small>
+        </div>
+        <div className="card-footer">
+          <p>{formatNumber(product.price)}</p>
 
-                {isInCart(product) && (
-                  <Button
-                    onClick={() => increase(product)}
-                    className="btn btn-outline-primary btn-sm"
-                  >
-                    Tambahkan ke Keranjang
-                  </Button>
-                )}
+          {isInCart(product) && (
+            <Button
+              type="button"
+              onClick={() => increase(product)}
+              className="btn btn-outline-primary btn-sm"
+            >
+              Add more
+            </Button>
+          )}
 
-                {!isInCart(product) && (
-                  <Button
-                    onClick={() => addProduct(product)}
-                    className="btn btn-primary btn-sm"
-                  >
-                    Masukkan ke Keranjang
-                  </Button>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
+          {!isInCart(product) && (
+            <Button
+              type="button"
+              onClick={() => addProduct(product)}
+              className="btn btn-primary btn-sm"
+            >
+              Add to cart
+            </Button>
+          )}
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
