@@ -8,7 +8,7 @@ const ProdukTerbaru = ({ items }) => {
       <h2 className="text-left mb-4">Produk Pilihan</h2>
       <div className="row">
         {items.map((item) => (
-          <div key={item._id} className="col-6 col-lg-3 card-group">
+          <div key={item.id} className="col-6 col-lg-3 card-group">
             <div className="card text-center mb-4">
               <img
                 src={item.imageUrl}
@@ -24,7 +24,7 @@ const ProdukTerbaru = ({ items }) => {
                 <Button
                   className="btn btn-info stretched-link"
                   type="link"
-                  href={`/coffee/${item._id}`}
+                  href={`/coffee/${item.id}`}
                   isBlock
                 >
                   Detail Produk

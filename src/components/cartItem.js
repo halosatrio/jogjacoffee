@@ -11,8 +11,8 @@ const CartItem = () => {
   return (
     <div className="card card-body border-0">
       {cartItems.map((product) => (
-        <div key={product._id} className="row no-gutters py-2">
-          <div className="col-sm-2 p-2" key={product._id}>
+        <div key={product.id} className="row no-gutters py-2">
+          <div className="col-sm-2 p-2" key={product.id}>
             <img
               src={product.imageUrl}
               alt={product.name}

@@ -12,7 +12,7 @@ const BannerPartner = ({ items }) => {
         </div>
         <div className="row row-cols-2 row-cols-md-4 mb-5">
           {items.map((item) => (
-            <div key={item._id} className="col">
+            <div key={item.id} className="col">
               <img
                 src={item.imageUrl}
                 alt={item.name}

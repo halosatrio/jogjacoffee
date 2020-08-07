@@ -15,7 +15,7 @@ const ItemsProduct = ({ product }) => {
   return (
     <div className="col mb-4">
       <div className="card text-center h-100">
-        <Button type="link" href={`/coffee/${product._id}`}>
+        <Button type="link" href={`/coffee/${product.id}`}>
           <img
             src={product.imageUrl}
             className="card-img-top"

@@ -13,7 +13,7 @@ const ProdukRekomendasi = (props) => {
       <div className="row justify-content-lg-between justify-content-center">
         {items.map((item) => (
           <div
-            key={item._id}
+            key={item.id}
             className="col-sm-11 col-md-6 col-lg-4 offset-lg-0 card-deck"
           >
             <div className="card text-center mb-4">
@@ -31,7 +31,7 @@ const ProdukRekomendasi = (props) => {
                 <Button
                   className="btn btn-info stretched-link"
                   type="link"
-                  href={`/coffee/${item._id}`}
+                  href={`/coffee/${item.id}`}
                   isBlock
                 >
                   Detail Produk

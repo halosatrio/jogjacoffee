@@ -1,6 +1,6 @@
 export const coffees = [
   {
-    _id: "blanco-1",
+    id: "blanco-1",
     name: "Arundaya Double Wash",
     company: "Blanco Coffee Roaster",
     price: 110000,
@@ -19,7 +19,7 @@ export const coffees = [
     imageUrl: "/images/blanco1.jpg",
   },
   {
-    _id: "blanco-2",
+    id: "blanco-2",
     name: "Arundaya Giling Basah",
     company: "Blanco Coffee Roaster",
     price: 90000,
@@ -38,7 +38,7 @@ export const coffees = [
     imageUrl: "/images/blanco2.jpg",
   },
   {
-    _id: "blanco-3",
+    id: "blanco-3",
     name: "Ijen Madu Merah",
     company: "Blanco Coffee Roaster",
     price: 95000,
@@ -58,7 +58,7 @@ export const coffees = [
     imageUrl: "/images/blanco3.jpg",
   },
   {
-    _id: "blanco-4",
+    id: "blanco-4",
     name: "Mamasa Sumarorong",
     company: "Blanco Coffee Roaster",
     price: 90000,
@@ -77,7 +77,7 @@ export const coffees = [
     imageUrl: "/images/blanco4.jpg",
   },
   {
-    _id: "blanco-5",
+    id: "blanco-5",
     name: "Orwell - Espresso Blend Arabica",
     company: "Blanco Coffee Roaster",
     price: 285000,
@@ -97,7 +97,7 @@ export const coffees = [
     imageUrl: "/images/blanco5.jpg",
   },
   {
-    _id: "blanco-6",
+    id: "blanco-6",
     name: "Blanco Coffee Drip Bag - Single Origin Gayo",
     company: "Blanco Coffee Roaster",
     price: 65000,
@@ -109,7 +109,7 @@ export const coffees = [
     imageUrl: "/images/blanco6.jpg",
   },
   {
-    _id: "djaya-1",
+    id: "djaya-1",
     name: "Sunda Patuha Yeast Natural Lot #1",
     company: "Djaya Coffee Roasters",
     price: 100000,
@@ -128,7 +128,7 @@ export const coffees = [
     imageUrl: "/images/djaya1.jpg",
   },
   {
-    _id: "djaya-2",
+    id: "djaya-2",
     name: "Gayo Pantan Musara CM Honey",
     company: "Djaya Coffee Roasters",
     price: 100000,
@@ -147,7 +147,7 @@ export const coffees = [
     imageUrl: "/images/djaya2.jpg",
   },
   {
-    _id: "djaya-3",
+    id: "djaya-3",
     name: "Gayo Madu Musara",
     company: "Djaya Coffee Roasters",
     price: 100000,
@@ -166,7 +166,7 @@ export const coffees = [
     imageUrl: "/images/djaya3.jpg",
   },
   {
-    _id: "djaya-4",
+    id: "djaya-4",
     name: "Toraja Pulu' Pulu",
     company: "Djaya Coffee Roasters",
     price: 100000,
@@ -185,7 +185,7 @@ export const coffees = [
     imageUrl: "/images/djaya4.jpg",
   },
   {
-    _id: "djaya-5",
+    id: "djaya-5",
     name: "Bali Satra Washed",
     company: "Djaya Coffee Roasters",
     price: 85000,
@@ -204,7 +204,7 @@ export const coffees = [
     imageUrl: "/images/djaya5.jpg",
   },
   {
-    _id: "epic-1",
+    id: "epic-1",
     name: "Malabar Java Natural",
     company: "Epic Coffee",
     price: 130000,
@@ -223,7 +223,7 @@ export const coffees = [
     imageUrl: "/images/epic1.jpg",
   },
   {
-    _id: "epic-2",
+    id: "epic-2",
     name: "Ijen Peaberry",
     company: "Epic Coffee",
     price: 150000,
@@ -243,7 +243,7 @@ export const coffees = [
     imageUrl: "/images/epic2.jpg",
   },
   {
-    _id: "epic-3",
+    id: "epic-3",
     name: "Luwak Gayo",
     company: "Epic Coffee",
     price: 320000,
@@ -262,7 +262,7 @@ export const coffees = [
     imageUrl: "/images/epic3.jpg",
   },
   {
-    _id: "epic-4",
+    id: "epic-4",
     name: "90+ Areka Yirgacheffe Ethiopia",
     company: "Epic Coffee",
     price: 190000,
@@ -282,7 +282,7 @@ export const coffees = [
     imageUrl: "/images/epic4.jpg",
   },
   {
-    _id: "epic-5",
+    id: "epic-5",
     name: "90+ Metis Espresso Blend",
     company: "Epic Coffee",
     price: 450000,
@@ -302,7 +302,7 @@ export const coffees = [
     imageUrl: "/images/epic5.jpg",
   },
   {
-    _id: "imba-1",
+    id: "imba-1",
     name: "Kaba Lesmana Semi Washed",
     company: "IMBA Coffee",
     price: 95000,
@@ -321,7 +321,7 @@ export const coffees = [
     imageUrl: "/images/imba1.jpg",
   },
   {
-    _id: "imba-2",
+    id: "imba-2",
     name: "Bondo Argopuro Natural",
     company: "IMBA Coffee",
     price: 95000,
@@ -340,7 +340,7 @@ export const coffees = [
     imageUrl: "/images/imba2.jpg",
   },
   {
-    _id: "imba-3",
+    id: "imba-3",
     name: "Pak Haji Van Halu Natural",
     company: "IMBA Coffee",
     price: 95000,
@@ -359,7 +359,7 @@ export const coffees = [
     imageUrl: "/images/imba3.jpg",
   },
   {
-    _id: "imba-4",
+    id: "imba-4",
     name: "Simalungun Na Birong Semi Washed",
     company: "IMBA Coffee",
     price: 95000,
@@ -378,7 +378,7 @@ export const coffees = [
     imageUrl: "/images/imba4.jpg",
   },
   {
-    _id: "maige-1",
+    id: "maige-1",
     name: "Batak Lumban Julu",
     company: "Maige Coffee Roastery",
     price: 80000,
@@ -397,7 +397,7 @@ export const coffees = [
     imageUrl: "/images/maige1.jpg",
   },
   {
-    _id: "maige-2",
+    id: "maige-2",
     name: "Gambung Pasir Jambu",
     company: "Maige Coffee Roastery",
     price: 85000,
@@ -416,7 +416,7 @@ export const coffees = [
     imageUrl: "/images/maige2.jpg",
   },
   {
-    _id: "maige-3",
+    id: "maige-3",
     name: "Gayo USDA Dry Hull",
     company: "Maige Coffee Roastery",
     price: 90000,
@@ -435,7 +435,7 @@ export const coffees = [
     imageUrl: "/images/maige3.jpg",
   },
   {
-    _id: "lestari-1",
+    id: "lestari-1",
     name: "Wonosobo Natural",
     company: "Lestari Coffee Roasters",
     price: 100000,
@@ -454,7 +454,7 @@ export const coffees = [
     imageUrl: "/images/lestari1.jpg",
   },
   {
-    _id: "lestari-2",
+    id: "lestari-2",
     name: "Kamojang Full Washed",
     company: "Lestari Coffee Roasters",
     price: 95000,
@@ -473,7 +473,7 @@ export const coffees = [
     imageUrl: "/images/lestari2.jpg",
   },
   {
-    _id: "lestari-3",
+    id: "lestari-3",
     name: "Gayo Kenawat Black Honey",
     company: "Lestari Coffee Roasters",
     price: 100000,
@@ -492,7 +492,7 @@ export const coffees = [
     imageUrl: "/images/lestari3.jpg",
   },
   {
-    _id: "lestari-4",
+    id: "lestari-4",
     name: "Argopuro Natural",
     company: "Lestari Coffee Roasters",
     price: 120000,
@@ -511,7 +511,7 @@ export const coffees = [
     imageUrl: "/images/lestari4.jpg",
   },
   {
-    _id: "riphy-1",
+    id: "riphy-1",
     name: "Robusta Jepalo",
     company: "Riphy Coffee Roastery",
     price: 150000,
@@ -530,7 +530,7 @@ export const coffees = [
     imageUrl: "/images/riphy1.jpg",
   },
   {
-    _id: "riphy-2",
+    id: "riphy-2",
     name: "Bone - Bone Enrekang",
     company: "Riphy Coffee Roastery",
     price: 90000,
@@ -549,7 +549,7 @@ export const coffees = [
     imageUrl: "/images/riphy2.jpg",
   },
   {
-    _id: "riphy-3",
+    id: "riphy-3",
     name: "Gayo Araishien",
     company: "Riphy Coffee Roastery",
     price: 95000,
@@ -568,7 +568,7 @@ export const coffees = [
     imageUrl: "/images/riphy3.jpg",
   },
   {
-    _id: "space-1",
+    id: "space-1",
     name: "Strawberry Fields - Espresso Blend Arabika",
     company: "Space Coffee Roastery",
     price: 100000,
@@ -587,7 +587,7 @@ export const coffees = [
     imageUrl: "/images/space1.jpg",
   },
   {
-    _id: "space-2",
+    id: "space-2",
     name: "Originutt - Espresso Blend Arabika",
     company: "Space Coffee Roastery",
     price: 100000,
@@ -607,7 +607,7 @@ export const coffees = [
     imageUrl: "/images/space2.jpg",
   },
   {
-    _id: "space-3",
+    id: "space-3",
     name: "Gayo Black Tea",
     company: "Space Coffee Roastery",
     price: 85000,
@@ -626,7 +626,7 @@ export const coffees = [
     imageUrl: "/images/space3.jpg",
   },
   {
-    _id: "space-4",
+    id: "space-4",
     name: "Lintong Green Mango",
     company: "Space Coffee Roastery",
     price: 135000,
@@ -646,7 +646,7 @@ export const coffees = [
     imageUrl: "/images/space4.jpg",
   },
   {
-    _id: "space-5",
+    id: "space-5",
     name: "Rancabali Peach",
     company: "Space Coffee Roastery",
     price: 135000,
@@ -667,7 +667,7 @@ export const coffees = [
 ];
 
 export function getCoffee(id) {
-  return coffees.find((c) => c._id === id);
+  return coffees.find((c) => c.id === id);
 }
 
 export function getRecommended() {
