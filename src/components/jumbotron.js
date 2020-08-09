@@ -13,7 +13,9 @@ const Jumbotron = (props) => {
   return (
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
-        <h1 className="font-weight-bold line-height-1">Ngopi di Jogja</h1>
+        <h1 className="font-weight-bold line-height-1">
+          Jogja Coffee Festival
+        </h1>
         <p className="lead my-5">
           Ajang pertemuan bagi pelaku industri kopi dan penikmat kopi di wilayah
           Yogyakarta
@@ -21,11 +23,11 @@ const Jumbotron = (props) => {
         <Button
           type="button"
           onClick={showRekomendasi}
-          className="btn px-5 button"
+          className="btn px-4 py-2 button"
           hasShadow
           isPrimary
         >
-          Lihat Produk
+          Start Your Coffee Journey!
         </Button>
       </div>
     </div>

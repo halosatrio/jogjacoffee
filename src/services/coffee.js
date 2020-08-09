@@ -6,7 +6,7 @@ export const coffees = [
     price: 110000,
     description: {
       origin: "Pantan Musara, Aceh Gayo",
-      altitude: "1.650 mdpl",
+      altitude: "1.650 masl",
       varietas: "Single Varietas (Abyssinia)",
       process: "Double Washed",
       roasting: "Filter Roast",
@@ -25,7 +25,7 @@ export const coffees = [
     price: 90000,
     description: {
       origin: "Pantan Musara, Aceh Gayo",
-      altitude: "1.650 mdpl",
+      altitude: "1.650 masl",
       varietas: "Abyssinia, Catura, Bourbon",
       process: "Giling Basah (Wet Hulled)",
       roasting: "Filter Roast",
@@ -44,7 +44,7 @@ export const coffees = [
     price: 95000,
     description: {
       origin: "Banyuwangi, Mt. Ijen, East Java",
-      altitude: "1110 - 1200 mdpl",
+      altitude: "1110 - 1200 masl",
       varietas: "Cobra, USDA 762, Lini S",
       process: "Red Honey",
       roasting: "Filter Roast",
@@ -64,7 +64,7 @@ export const coffees = [
     price: 90000,
     description: {
       origin: "Mamasa, Sumarorong, West Sulawesi",
-      altitude: "1200 - 1300 mdpl",
+      altitude: "1200 - 1300 masl",
       varietas: "Typica, Lini S",
       process: "Wet Hulled",
       roasting: "Filter Roast",
@@ -83,7 +83,7 @@ export const coffees = [
     price: 285000,
     description: {
       origin: "Pantan Musara, Aceh Gayo",
-      altitude: "1.650 mdpl",
+      altitude: "1.650 masl",
       varietas: "Mixed",
       process: "Double Washed",
       roasting: "Espresso Roast - Double Roasting Profile",
@@ -115,7 +115,7 @@ export const coffees = [
     price: 100000,
     description: {
       origin: "Gn. Patuha, Rancabali, Alamendah, Bandung, Jawa Barat",
-      altitude: "1600 mdpl",
+      altitude: "1600 masl",
       varietas: "Ateng Super",
       process: "Yeast Natural",
       roasting: "Light",
@@ -134,7 +134,7 @@ export const coffees = [
     price: 100000,
     description: {
       origin: "Pantan Musara, Aceh Gayo",
-      altitude: "1670 mdpl",
+      altitude: "1670 masl",
       varietas: "Abyssinia, Caturra, Catimor",
       process: "Honey Carbonic Maceration (CM)",
       roasting: "Light",
@@ -153,7 +153,7 @@ export const coffees = [
     price: 100000,
     description: {
       origin: "Pantan Musara, Aceh Gayo",
-      altitude: "1670 mdpl",
+      altitude: "1670 masl",
       varietas: "Abyssinia & P-88",
       process: "Honey",
       roasting: "Light",
@@ -172,7 +172,7 @@ export const coffees = [
     price: 100000,
     description: {
       origin: "Pulu' Pulu, Buntu Pepasan, Sulawesi Selatan",
-      altitude: "1200 - 1500 mdpl",
+      altitude: "1200 - 1500 masl",
       varietas: "S-795",
       process: "Washed",
       roasting: "Half City",
@@ -191,7 +191,7 @@ export const coffees = [
     price: 85000,
     description: {
       origin: "Satra, Kintamani, Bali",
-      altitude: "1250 mdpl",
+      altitude: "1250 masl",
       varietas: "Kopyol (B-1)",
       process: "Washed",
       roasting: "Half City",
@@ -210,7 +210,7 @@ export const coffees = [
     price: 130000,
     description: {
       origin: "Pangalengan, West Java, Indonesia",
-      altitude: "1400 mdpl",
+      altitude: "1400 masl",
       varietas: "Sigararutang, Andungsari",
       process: "Natural",
       roasting: "Medium Roast",
@@ -229,7 +229,7 @@ export const coffees = [
     price: 150000,
     description: {
       origin: "MT. Argopuro, Bondowoso, Indonesia",
-      altitude: "1200-1400 mdpl",
+      altitude: "1200-1400 masl",
       varietas: "S795, Andungsari",
       process: "Natural",
       roasting: "Medium Roast",
@@ -249,7 +249,7 @@ export const coffees = [
     price: 320000,
     description: {
       origin: "Gayo, Aceh, Indonesia",
-      altitude: "1400 mdpl",
+      altitude: "1400 masl",
       varietas: "Bourbon",
       process: "Washed",
       roasting: "Medium Roast",
@@ -268,7 +268,7 @@ export const coffees = [
     price: 190000,
     description: {
       origin: "Yirgacheffe, Ethiopia",
-      altitude: "1950 mdpl",
+      altitude: "1950 masl",
       varietas: "Hairloom",
       process: "Natural",
       roasting: "Medium Roast",
@@ -288,7 +288,7 @@ export const coffees = [
     price: 450000,
     description: {
       origin: "Guji Ethiopia, Ethiopia Kochere, Columbia",
-      altitude: "1300 - 1900 mdpl",
+      altitude: "1300 - 1900 masl",
       varietas: "Mix",
       process: "natural, washed ",
       roasting: "Medium Roast",
@@ -308,7 +308,7 @@ export const coffees = [
     price: 95000,
     description: {
       origin: "Gunung Kaba - Bengkulu",
-      altitude: "1100 - 1300 mdpl",
+      altitude: "1100 - 1300 masl",
       varietas: "Sigararutang",
       process: "Semi Washed",
       roasting: "Medium Roast",
@@ -327,7 +327,7 @@ export const coffees = [
     price: 95000,
     description: {
       origin: "Gunung Argopuro - Pokmas Walida - Jawa Timur",
-      altitude: "1200 - 1400 mdpl",
+      altitude: "1200 - 1400 masl",
       varietas: "Lini S & Kartika",
       process: "Natural",
       roasting: "Light to Medium",
@@ -346,7 +346,7 @@ export const coffees = [
     price: 95000,
     description: {
       origin: "Gunung Halu - Jawa Barat",
-      altitude: "1200 - 1300 mdpl",
+      altitude: "1200 - 1300 masl",
       varietas: "Typica",
       process: "Natural",
       roasting: "Medium Roast",
@@ -365,7 +365,7 @@ export const coffees = [
     price: 95000,
     description: {
       origin: "Simalungun - Sumatera Utara",
-      altitude: "1100 - 1300mdpl",
+      altitude: "1100 - 1300masl",
       varietas: "Sigararutang",
       process: "Semi Washed",
       roasting: "Medium Roast",
@@ -384,7 +384,7 @@ export const coffees = [
     price: 80000,
     description: {
       origin: "Lumban Julu, Humbahas",
-      altitude: "1550 mdpl",
+      altitude: "1550 masl",
       varietas: "Sigarar Utang & Atenf",
       process: "Wet Hulled",
       roasting: "Light to Medium",
@@ -403,7 +403,7 @@ export const coffees = [
     price: 85000,
     description: {
       origin: "Pasir Jambu, Gambung, Bandung",
-      altitude: "1350 mdpl",
+      altitude: "1350 masl",
       varietas: "Andungsari & Sigararutang",
       process: "Full Washed",
       roasting: "Light to Medium",
@@ -422,7 +422,7 @@ export const coffees = [
     price: 90000,
     description: {
       origin: "Wih Pesam, Simpang Teritit, Aceh Gayo",
-      altitude: "1600 mdpl",
+      altitude: "1600 masl",
       varietas: "USDA 762",
       process: "Washed Dry Hull",
       roasting: "Medium",
@@ -460,7 +460,7 @@ export const coffees = [
     price: 95000,
     description: {
       origin: "Kamojang, West Java",
-      altitude: "1600-1800 mdpl",
+      altitude: "1600-1800 masl",
       varietas: "USDA, Lini S, Sigararutang",
       process: "Full washed",
       roasting: "Medium",
@@ -479,7 +479,7 @@ export const coffees = [
     price: 100000,
     description: {
       origin: "Kampung Kenawat, North Sumatera",
-      altitude: "1300-1700 mdpl",
+      altitude: "1300-1700 masl",
       varietas: "Typica, Ateng, Timtim",
       process: "Black Honey",
       roasting: "Light to Medium",
@@ -498,7 +498,7 @@ export const coffees = [
     price: 120000,
     description: {
       origin: "Argopuro, East Java",
-      altitude: "1200-1400 mdpl",
+      altitude: "1200-1400 masl",
       varietas: "Lini S795, Kartika",
       process: "Natural",
       roasting: "Light",
@@ -517,7 +517,7 @@ export const coffees = [
     price: 150000,
     description: {
       origin: "Desa Jepalo, Pati, Jawa Tengah",
-      altitude: "700 - 900 Mdpl",
+      altitude: "700 - 900 masl",
       varietas: "Tugusari - Mix",
       process: "Natural",
       roasting: "Medium - Dark",
@@ -536,7 +536,7 @@ export const coffees = [
     price: 90000,
     description: {
       origin: "Enrekang, Sulawesi Selatan",
-      altitude: "900 - 1200 Mdpl",
+      altitude: "900 - 1200 masl",
       varietas: "Mix varietas",
       process: "Semi washed",
       roasting: "Light - Medium",
@@ -555,7 +555,7 @@ export const coffees = [
     price: 95000,
     description: {
       origin: "Gayo Pegasing, Aceh",
-      altitude: "900 - 1100 Mdpl",
+      altitude: "900 - 1100 masl",
       varietas: "Mix varietas",
       process: "Natural",
       roasting: "Light - Medium",
@@ -574,7 +574,7 @@ export const coffees = [
     price: 100000,
     description: {
       origin: "Bali and Aceh",
-      altitude: "1100 - 1400 mdpl",
+      altitude: "1100 - 1400 masl",
       varietas: "Mix",
       process: "Natural, Full Washed",
       roasting: "Espresso Roast",
@@ -593,7 +593,7 @@ export const coffees = [
     price: 100000,
     description: {
       origin: "Brazil, Bali, Aceh",
-      altitude: "1200 - 1500 mdpl",
+      altitude: "1200 - 1500 masl",
       varietas: "Mix",
       process: "Semi Washed, Red Honey, Natural",
       roasting: "Espresso Roast",
@@ -613,7 +613,7 @@ export const coffees = [
     price: 85000,
     description: {
       origin: "Pegasing, Gayo, Aceh",
-      altitude: "1250 mdpl",
+      altitude: "1250 masl",
       varietas: "Tim-Tim & Bourbon",
       process: "Wet Hull",
       roasting: "Filter Roast",
@@ -632,7 +632,7 @@ export const coffees = [
     price: 135000,
     description: {
       origin: "Lintongnihuta, North Sumatera",
-      altitude: "1400-1450 mdpl",
+      altitude: "1400-1450 masl",
       varietas: "Sigararutang",
       process: "Anaerobic Yeast Fermentation",
       roasting: "Filter Roast",
@@ -652,7 +652,7 @@ export const coffees = [
     price: 135000,
     description: {
       origin: "Rancabali, West Java",
-      altitude: "1300-1500 mdpl",
+      altitude: "1300-1500 masl",
       varietas: "Sigararutang, Lini-S",
       process: "Natural",
       roasting: "Filter Roast",

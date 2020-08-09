@@ -9,25 +9,25 @@ const CartItem = () => {
   );
 
   return (
-    <div className="card card-body border-0">
+    <div>
       {cartItems.map((product) => (
-        <div key={product.id} className="row no-gutters py-2">
-          <div className="col-sm-2 p-2" key={product.id}>
+        <div key={product.id} className="row py-2 mb-3">
+          <div className="col-3 col-sm-4 col-md-4 col-lg-2" key={product.id}>
             <img
               src={product.imageUrl}
               alt={product.name}
               className="img-fluid d-block"
-              style={{ margin: "0 auto", maxHeight: "100px" }}
+              style={{ maxHeight: "120px" }}
             />
           </div>
-          <div className="col-sm-4 p-2">
-            <h5 className="mb-1">{product.name}</h5>
-            <p className="mb-1">Harga: {formatNumber(product.price)}</p>
+          <div className="col-5 col-md-5">
+            <h5 className="mb-2">{product.name}</h5>
+            <p className="text-muted mb-1">
+              Price: {formatNumber(product.price)}
+            </p>
+            <p className="mb-0">Quantity: {product.quantity}</p>
           </div>
-          <div className="col-sm-2 p-2 text-center ">
-            <p className="mb-0">Jumlah: {product.quantity}</p>
-          </div>
-          <div className="col-sm-4 p-2 text-right">
+          <div className="col-4 col-sm-3 col-md-3 text-center">
             <button
               onClick={() => increase(product)}
               className="btn btn-primary btn-sm mr-2 mb-1"

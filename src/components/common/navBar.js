@@ -58,13 +58,13 @@ const NavBar = (props) => {
           <ul className="navbar-nav ml-auto">
             <li className={`nav-item${getNavLinkClass("/katalog")}`}>
               <Button className="nav-link" type="link" href="/katalog">
-                Katalog
+                Catalogue
               </Button>
             </li>
             <li className={`nav-item${getNavLinkClass("/cart")}`}>
               <Button className="nav-link" type="link" href="/cart">
                 <CartIcon width={"18px"} />
-                Keranjang ({itemCount})
+                Cart ({itemCount})
               </Button>
             </li>
           </ul>

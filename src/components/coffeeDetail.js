@@ -4,46 +4,46 @@ const CoffeeDetail = (props) => {
   const { data } = props;
   return (
     <div className="col-md-10" ref={props.refInfoProduk}>
-      <h3 className="mb-4 text-gray-800">Detail Produk</h3>
+      <h3 className="mb-4 text-gray-800">Product Information</h3>
       <table className="table table-borderless table-sm">
         <tbody>
           <tr>
-            <td>Kopi</td>
+            <td style={{ width: 130 }}>Coffee Name</td>
             <td>{data.name}</td>
           </tr>
           <tr>
-            <td>Berat</td>
+            <td style={{ width: 130 }}>Net Weight</td>
             <td>{data.weight}</td>
           </tr>
           {data.extras ? (
             <tr>
-              <td>Deskripsi</td>
+              <td style={{ width: 130 }}>Description</td>
               <td>{data.extras}</td>
             </tr>
           ) : (
             <>
               <tr>
-                <td>Origin</td>
+                <td style={{ width: 130 }}>Origin</td>
                 <td>{data.description.origin}</td>
               </tr>
               <tr>
-                <td>Altitude</td>
+                <td style={{ width: 130 }}>Altitude</td>
                 <td>{data.description.altitude}</td>
               </tr>
               <tr>
-                <td>Varietasi</td>
+                <td style={{ width: 130 }}>Variety</td>
                 <td>{data.description.varietas}</td>
               </tr>
               <tr>
-                <td>Process</td>
+                <td style={{ width: 130 }}>Process</td>
                 <td>{data.description.process}</td>
               </tr>
               <tr>
-                <td>Roasting</td>
+                <td style={{ width: 130 }}>Roasting</td>
                 <td>{data.description.roasting}</td>
               </tr>
               <tr>
-                <td>Tasting Notes</td>
+                <td style={{ width: 130 }}>Tasting Notes</td>
                 <td>{data.description.notes}</td>
               </tr>
             </>

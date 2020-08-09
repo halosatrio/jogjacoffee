@@ -11,11 +11,11 @@ const CartForm = () => {
   );
 
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="card">
       <div className="card-body">
-        <p className="mb-1">Total Barang</p>
+        <p className="mb-1">Product Quantity</p>
         <p className="h4 mb-3">{itemCount}</p>
-        <p className="mb-1">Total Pembayaran</p>
+        <p className="mb-1">Total Payment</p>
         <p className="h3">{formatNumber(total)}</p>
         <hr className="my-4" />
         <div className="text-center">
@@ -31,7 +31,7 @@ const CartForm = () => {
             className="btn btn-outline-secondary"
             onClick={clearCart}
           >
-            HAPUS
+            CLEAR
           </Button>
         </div>
       </div>

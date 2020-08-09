@@ -8,11 +8,11 @@ const Footer = () => {
       <div className="container my-4">
         <div className="row">
           <div className="col-sm-4 mb-4 text-center text-sm-left">
-            <h6 className="mt-2">Ngopi di Jogja</h6>
+            <h6 className="mt-2">Jogja Coffee Festival</h6>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
                 <Button type="link" href="/register">
-                  Tentang Ngopi di Jogja
+                  About the Festival
                 </Button>
               </li>
               <li className="list-group-item">
@@ -28,27 +28,27 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-sm-4 mb-4 text-center text-sm-left">
-            <h6 className="mt-2">Bantuan dan Panduan</h6>
+            <h6 className="mt-2">Customer Services</h6>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
                 <Button type="link" href="/">
-                  Syarat dan Ketentuan
+                  Terms and Conditions
                 </Button>
               </li>
               <li className="list-group-item">
                 <Button type="link" href="/">
-                  Kebijakan Privasi
+                  Privacy Policy
                 </Button>
               </li>
               <li className="list-group-item">
                 <Button type="link" href="/">
-                  Bantuan Pelayanan
+                  FAQ
                 </Button>
               </li>
             </ul>
           </div>
           <div className="col-sm-4 text-center text-sm-left">
-            <h6 className="mt-2">Ikuti Kami</h6>
+            <h6 className="mt-2">Follow Us!</h6>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
                 <Button isExternal type="link" href="/">

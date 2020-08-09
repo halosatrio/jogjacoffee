@@ -23,26 +23,25 @@ const CoffeeBeli = (props) => {
 
   return (
     <div className="card p-4 mb-5">
-      <div className="card-body">
-        <h4 className="card-title mb-3">{data.name}</h4>
-        <h6 className="card-subtitle text-muted">
-          Berat bersih: {data.weight}
+      <div className="card-body text-center">
+        <h2 className="card-title mb-4">{data.name}</h2>
+        <h6 className="card-subtitle text-muted mb-3">
+          Net Weight: {data.weight}
         </h6>
         <Button
           type="button"
           onClick={showInfoProduk}
-          className="btn btn-sm btn-outline-info mt-2 mb-4"
+          className="btn btn-sm btn-info mt-2 mb-5 px-4"
         >
-          Informasi Produk
+          Product Information
         </Button>
-        <p>Harga: {formatNumber(data.price)}</p>
-        <p>Jumlah</p>
-        <h5 className="mb-4">Total: {formatNumber(data.price)}</h5>
+        <h3 className="mb-3">Price: {formatNumber(data.price)}</h3>
         {isInCart(data) && (
           <Button
             type="button"
             onClick={() => increase(data)}
-            className="btn btn-outline-primary btn-sm"
+            className="btn btn-outline-primary py-2"
+            isBlock
           >
             Add more
           </Button>
@@ -52,7 +51,8 @@ const CoffeeBeli = (props) => {
           <Button
             type="button"
             onClick={() => addProduct(data)}
-            className="btn btn-primary btn-sm"
+            className="btn btn-primary py-2"
+            isBlock
           >
             Add to cart
           </Button>

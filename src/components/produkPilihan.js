@@ -5,11 +5,11 @@ import Button from "./common/button";
 const produkPilihan = ({ items }) => {
   return (
     <>
-      <h2 className="text-left mb-4">Produk Terbaru</h2>
-      <div className="row">
+      <h2 className="text-left mb-4">Other Curated Products</h2>
+      <div className="row row-cols-2 row-cols-md-3 row-cols-xl-6 mb-4">
         {items.map((item) => (
-          <div key={item.id} className="col-6 col-md-4 col-lg-2 card-group">
-            <div className="card text-center mb-4">
+          <div key={item.id} className="col mb-4">
+            <div className="card text-center h-100">
               <img
                 src={item.imageUrl}
                 className="card-img-top"
@@ -27,7 +27,7 @@ const produkPilihan = ({ items }) => {
                   href={`/coffee/${item.id}`}
                   isBlock
                 >
-                  Detail Produk
+                  Details
                 </Button>
               </div>
             </div>

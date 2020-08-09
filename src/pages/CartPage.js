@@ -24,7 +24,7 @@ class CartPage extends Component {
       <>
         <NavBar {...this.props} />
         <div className="container body-cart my-5">
-          <TitleText>Keranjang</TitleText>
+          <TitleText>Cart</TitleText>
           <div className="row">
             {cartItems.length > 0 ? (
               <div className="col-md-8">
@@ -32,21 +32,21 @@ class CartPage extends Component {
               </div>
             ) : (
               <div className="col-12 text-muted mb-5">
-                <h2 className="text-center">Keranjang Anda Kosong</h2>
+                <h2 className="text-center">Your Cart is Empty</h2>
               </div>
             )}
 
             {checkout && (
               <div className="col-12 text-center text-success">
-                <p>Checkout Berhasil</p>
+                <p>Checkout Success</p>
                 <a href="/" className="btn btn-outline-success">
-                  Kembali Belanja
+                  Back to Store
                 </a>
               </div>
             )}
 
             {cartItems.length > 0 && (
-              <div className="col-md-2">
+              <div className="col-md-4">
                 <CartForm />
               </div>
             )}

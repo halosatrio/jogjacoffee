@@ -8,7 +8,7 @@ const BannerPartner = ({ items }) => {
           className="row mb-5 justify-content-center"
           style={{ width: "100%" }}
         >
-          <h2 className="text-center">Our Coffee Partners</h2>
+          <h2 className="font-weight-bold text-center">Our Coffee Partners</h2>
         </div>
         <div className="row row-cols-2 row-cols-md-4 mb-5">
           {items.map((item) => (

@@ -8,7 +8,7 @@ const ProdukRekomendasi = (props) => {
   return (
     <section ref={props.refRekomendasi}>
       <h2 className="text-left  ml-sm-5 ml-md-4 ml-lg-0 mb-4">
-        Produk Rekomendasi
+        Recommended Products
       </h2>
       <div className="row justify-content-lg-between justify-content-center">
         {items.map((item) => (
@@ -34,7 +34,7 @@ const ProdukRekomendasi = (props) => {
                   href={`/coffee/${item.id}`}
                   isBlock
                 >
-                  Detail Produk
+                  Details
                 </Button>
               </div>
             </div>
