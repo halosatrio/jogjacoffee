@@ -11,7 +11,7 @@ import { getCoffee } from "../services/coffee";
 class DetailPage extends Component {
   state = {
     data: {
-      _id: "",
+      id: "",
       name: "",
       company: "",
       price: "",
@@ -38,7 +38,7 @@ class DetailPage extends Component {
 
   mapToViewModel(coffee) {
     return {
-      _id: coffee._id,
+      id: coffee.id,
       name: coffee.name,
       company: coffee.company,
       price: coffee.price,
@@ -60,7 +60,7 @@ class DetailPage extends Component {
             <div className="col-10 col-md-6 col-lg-6 col-xl-5 mb-4">
               <CoffeeImage data={data} />
             </div>
-            <div className="deskripsi-kopi col-11 col-md-6 col-lg-6 col-xl-5">
+            <div className="col-11 col-md-6 col-lg-6 col-xl-5">
               <CoffeeBeli data={data} refInfoProduk={this.refInfoProduk} />
             </div>
           </div>

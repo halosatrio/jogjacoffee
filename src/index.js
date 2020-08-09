@@ -4,16 +4,13 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 import { HelmetProvider } from "react-helmet-async";
-import ProductsContextProvider from "./context/ProductsContext";
 import CartContextProvider from "./context/CartContext";
 
 ReactDOM.render(
   <HelmetProvider>
-    <ProductsContextProvider>
-      <CartContextProvider>
-        <App />
-      </CartContextProvider>
-    </ProductsContextProvider>
+    <CartContextProvider>
+      <App />
+    </CartContextProvider>
   </HelmetProvider>,
   document.getElementById("root")
 );

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Button from "./common/button";
 
 import { formatNumber } from "./../utils/numberFormat";
+import { CartContext } from "../context/CartContext";
 
 const CoffeeBeli = (props) => {
   function showInfoProduk() {
@@ -11,6 +12,12 @@ const CoffeeBeli = (props) => {
       behavior: "smooth",
     });
   }
+
+  const { addProduct, cartItems, increase } = useContext(CartContext);
+
+  const isInCart = (product) => {
+    return !!cartItems.find((item) => item.id === product.id);
+  };
 
   const { data } = props;
 
@@ -31,9 +38,25 @@ const CoffeeBeli = (props) => {
         <p>Harga: {formatNumber(data.price)}</p>
         <p>Jumlah</p>
         <h5 className="mb-4">Total: {formatNumber(data.price)}</h5>
-        <Button type="button" className="btn" isPrimary isBlock>
-          Tambahkan ke Keranjang
-        </Button>
+        {isInCart(data) && (
+          <Button
+            type="button"
+            onClick={() => increase(data)}
+            className="btn btn-outline-primary btn-sm"
+          >
+            Add more
+          </Button>
+        )}
+
+        {!isInCart(data) && (
+          <Button
+            type="button"
+            onClick={() => addProduct(data)}
+            className="btn btn-primary btn-sm"
+          >
+            Add to cart
+          </Button>
+        )}
       </div>
     </div>
   );

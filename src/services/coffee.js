@@ -88,7 +88,7 @@ export const coffees = [
       process: "Double Washed",
       roasting: "Espresso Roast - Double Roasting Profile",
       notes:
-        "Black: Mandarin Orange, Caramel, Medium Body, Floral Finish - White: Vanilla Biscuit, Brown Sugar, White Chocolate",
+        "Black: Mandarin Orange, Caramel, Medium Body, Floral Finish  --  White: Vanilla Biscuit, Brown Sugar, White Chocolate",
     },
     isRecommended: false,
     isTerbaru: false,

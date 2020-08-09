@@ -3,7 +3,7 @@ import React from "react";
 const CoffeeDetail = (props) => {
   const { data } = props;
   return (
-    <div className="col-md-8" ref={props.refInfoProduk}>
+    <div className="col-md-10" ref={props.refInfoProduk}>
       <h3 className="mb-4 text-gray-800">Detail Produk</h3>
       <table className="table table-borderless table-sm">
         <tbody>

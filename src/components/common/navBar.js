@@ -18,7 +18,7 @@ const NavBar = (props) => {
   };
 
   const getNavLinkClass = (path) => {
-    return props.path === path ? " active" : "";
+    return props.location.pathname === path ? " active" : "";
   };
 
   const classOne = collapsed
@@ -37,8 +37,6 @@ const NavBar = (props) => {
       </nav>
     );
   }
-
-  console.log("path from navbar", props.path);
 
   return (
     <nav className="navbar sticky-top navbar-expand-lg bg-white shadow-sm navbar-light py-3">
