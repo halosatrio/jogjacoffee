@@ -2,13 +2,10 @@ import React from "react";
 
 const TitleText = (props) => {
   const className = [props.className];
-  if (props.isBold) className.push("font-weight-bold");
 
   return (
-    <div className="container text-center">
-      <h1 className={className.join(" ")} style={{ marginBottom: 60 }}>
-        {props.children}
-      </h1>
+    <div className="text-center">
+      <h1 className={`title-text ${className.join(" ")}`}>{props.children}</h1>
     </div>
   );
 };

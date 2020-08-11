@@ -11,24 +11,26 @@ const CartForm = () => {
   );
 
   return (
-    <div className="card">
-      <div className="card-body">
+    <div className="card shadow-sm">
+      <div className="card-body text-center text-md-left">
         <p className="mb-1">Product Quantity</p>
         <p className="h4 mb-3">{itemCount}</p>
         <p className="mb-1">Total Payment</p>
-        <p className="h3">{formatNumber(total)}</p>
+        <p className="h3" style={{ fontSize: "1.5rem" }}>
+          {formatNumber(total)}
+        </p>
         <hr className="my-4" />
         <div className="text-center">
           <Button
             type="button"
-            className="btn btn-primary mr-3"
+            className="btn btn-primary mr-3 btn-sm"
             onClick={handleCheckout}
           >
             CHECKOUT
           </Button>
           <Button
             type="button"
-            className="btn btn-outline-secondary"
+            className="btn btn-outline-secondary btn-sm"
             onClick={clearCart}
           >
             CLEAR

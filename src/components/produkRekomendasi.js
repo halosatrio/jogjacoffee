@@ -7,16 +7,14 @@ const ProdukRekomendasi = (props) => {
 
   return (
     <section ref={props.refRekomendasi}>
-      <h2 className="text-left  ml-sm-5 ml-md-4 ml-lg-0 mb-4">
-        Recommended Products
-      </h2>
+      <h2 className="text-center mb-4">Recommended Products</h2>
       <div className="row justify-content-lg-between justify-content-center">
         {items.map((item) => (
           <div
             key={item.id}
-            className="col-sm-11 col-md-6 col-lg-4 offset-lg-0 card-deck"
+            className="col-sm-11 col-md-6 col-lg-4 offset-lg-0 mb-4"
           >
-            <div className="card text-center mb-4">
+            <div className="card shadow-sm text-center h-100">
               <img
                 src={item.imageUrl}
                 className="card-img-top"

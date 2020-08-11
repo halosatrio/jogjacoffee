@@ -7,7 +7,7 @@ const IconText = (props) => {
 
   return (
     <Button className={className.join(" ")} href="" type="link">
-      Jogja Coffee Festival
+      {props.children}
     </Button>
   );
 };

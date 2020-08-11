@@ -14,7 +14,7 @@ const ItemsProduct = ({ product }) => {
 
   return (
     <div className="col mb-4">
-      <div className="card text-center h-100">
+      <div className="card text-center h-100 shadow-sm">
         <Button type="link" href={`/coffee/${product.id}`}>
           <img
             src={product.imageUrl}
@@ -33,7 +33,8 @@ const ItemsProduct = ({ product }) => {
             <Button
               type="button"
               onClick={() => increase(product)}
-              className="btn btn-outline-primary btn-sm"
+              className="btn btn-outline-primary btn-sm font-weight-light"
+              isBlock
             >
               Add more
             </Button>
@@ -43,7 +44,8 @@ const ItemsProduct = ({ product }) => {
             <Button
               type="button"
               onClick={() => addProduct(product)}
-              className="btn btn-primary btn-sm"
+              className="btn btn-primary btn-sm font-weight-light"
+              isBlock
             >
               Add to cart
             </Button>

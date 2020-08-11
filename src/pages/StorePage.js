@@ -32,20 +32,22 @@ class StorePage extends Component {
   render() {
     const { partner, recommended, terbaru, pilihan } = this.state;
     return (
-      <>
+      <div className="store-page">
         <NavBar {...this.props} />
         <Jumbotron refRekomendasi={this.refRekomendasi} />
         <BannerPartner items={partner} />
-        <section className="featured shadow-sm bg-white p-3 mx-5">
+        <section className="featured shadow-sm bg-white px-5">
           <ProdukRekomendasi
             refRekomendasi={this.refRekomendasi}
             items={recommended}
           />
+          <hr />
           <ProdukTerbaru items={terbaru} />
+          <hr />
           <ProdukPilihan items={pilihan} />
         </section>
         <Footer />
-      </>
+      </div>
     );
   }
 }

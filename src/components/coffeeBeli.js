@@ -22,7 +22,7 @@ const CoffeeBeli = (props) => {
   const { data } = props;
 
   return (
-    <div className="card p-4 mb-5">
+    <div className="card coffee-beli p-4 mb-5 shadow-sm">
       <div className="card-body text-center">
         <h2 className="card-title mb-4">{data.name}</h2>
         <h6 className="card-subtitle text-muted mb-3">

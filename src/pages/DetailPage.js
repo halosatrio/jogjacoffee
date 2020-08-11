@@ -65,7 +65,6 @@ class DetailPage extends Component {
             </div>
           </div>
           <CoffeeDetail data={data} refInfoProduk={this.refInfoProduk} />
-          <hr />
         </section>
         <Footer />
       </>

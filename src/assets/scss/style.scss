@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;900&family=Poppins:wght@300;400;500&display=swap");
+
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -43,12 +45,26 @@
 @import "utilities";
 @import "print";
 
+$font-serif: "Playfair Display", serif;
+
+/* STORE PAGE */
+
+// BACKGROUND BODY
+.store-page {
+  background-image: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-decoration: none;
+}
+
+// JUMBOTRON
 .jumbotron {
   background: url(../images/banner-4.jpg);
   background-size: cover;
   background-position: center;
-  height: 350px;
+  height: 400px;
   position: relative;
+  margin-bottom: 60px;
   // z-index: -1;
 
   &:after {
@@ -67,8 +83,195 @@
     position: relative;
     z-index: 1;
 
+    h1 {
+      font-family: $font-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 1pt;
+    }
+
+    p {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
     .button {
       z-index: 3;
     }
+  }
+}
+
+// SECTION BRAND
+.brands {
+  h2 {
+    font-family: $font-serif;
+    font-weight: 900;
+    color: $gray-700;
+  }
+  h5 {
+    color: $gray-500;
+    font-weight: 400;
+    font-size: 12pt;
+  }
+}
+
+// SECTION FEATURED
+.featured {
+  margin: 60px 0;
+  h2 {
+    font-family: $font-serif;
+    font-weight: 900;
+    color: $gray-700;
+    padding-top: 30px;
+  }
+  p {
+    color: $gray-600;
+    font-weight: 300;
+    font-size: 12pt;
+  }
+  small {
+    font-weight: 300;
+  }
+}
+
+/* STORE PAGE END */
+
+/* KATALOG PAGE */
+.katalog {
+  padding: 0 30px;
+  p {
+    color: $gray-700;
+    font-weight: 400;
+    font-size: 12pt;
+  }
+  small {
+    font-weight: 300;
+  }
+  .card-footer {
+    p {
+      color: $gray-700;
+      font-size: 0.9rem;
+    }
+  }
+}
+/* KATALOG PAGE END */
+
+/* DETAIL PAGE */
+.coffee-beli {
+  h2 {
+    font-family: $font-serif;
+    font-weight: 600;
+  }
+}
+/* DETAIL PAGE END */
+
+// brand-text-icon
+.brand-text-icon {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: $primary;
+  &:hover {
+    color: $info;
+    text-decoration: none;
+  }
+}
+
+// NavBar
+.navbar {
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid $gray-200;
+
+  ul.navbar-nav {
+    li.nav-item {
+      &.active {
+        a.nav-link {
+          color: $primary;
+        }
+      }
+      a {
+        &.nav-link {
+          letter-spacing: 1px;
+          color: $gray-700;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// NAV
+.nav {
+  font-family: "Poppins", sans-serif;
+  padding: 12px 0;
+
+  li.nav-item {
+    font-size: 1.05rem;
+    &.active {
+      a.nav-link {
+        color: $primary;
+      }
+    }
+    a {
+      &.nav-link {
+        letter-spacing: 1px;
+        color: $gray-700;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// TITLE TEXT
+.title-text {
+  padding: 0, 40px;
+  font-family: $font-serif;
+  font-weight: 900;
+  margin-bottom: 60px;
+  letter-spacing: 1pt;
+  color: $gray-600;
+}
+
+// FOOTER
+footer {
+  border-top: 1px solid $gray-200;
+  font-family: "Poppins", sans-serif;
+  padding-top: 20px;
+
+  .brand-tagline {
+    margin-top: 8px;
+    color: $gray-500;
+    font-weight: 300;
+  }
+
+  .list-group-item {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0.3125rem 20;
+    border: 0;
+    a,
+    span {
+      color: $gray-500;
+      font-weight: 300;
+    }
+    a {
+      @include hover-focus {
+        color: $gray-800;
+      }
+    }
+  }
+  .copyrights {
+    font-size: 15px;
+    margin: 20px 0;
+    font-weight: 300;
+    color: $gray-500;
   }
 }

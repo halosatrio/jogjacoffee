@@ -5,11 +5,14 @@ import Button from "./common/button";
 const produkPilihan = ({ items }) => {
   return (
     <>
-      <h2 className="text-left mb-4">Other Curated Products</h2>
-      <div className="row row-cols-2 row-cols-md-3 row-cols-xl-6 mb-4">
+      <h2 className="text-center mb-4">Other Curated Products</h2>
+      <div
+        className="row row-cols-2 row-cols-md-3 row-cols-xl-6"
+        style={{ paddingBottom: 20 }}
+      >
         {items.map((item) => (
           <div key={item.id} className="col mb-4">
-            <div className="card text-center h-100">
+            <div className="card shadow-sm text-center h-100">
               <img
                 src={item.imageUrl}
                 className="card-img-top"
