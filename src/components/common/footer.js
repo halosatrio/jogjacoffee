@@ -22,17 +22,17 @@ const Footer = () => {
             <h6 className="mt-2 head-item">Jogja Coffee Festival</h6>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
-                <Button type="link" href="/register">
+                <Button type="link" href="/about">
                   About the Festival
                 </Button>
               </li>
               <li className="list-group-item">
-                <Button type="link" href="/catalogue">
+                <Button type="link" href="/">
                   Partner
                 </Button>
               </li>
               <li className="list-group-item">
-                <Button type="link" href="/user-guide">
+                <Button type="link" href="/">
                   Blog Posts
                 </Button>
               </li>
