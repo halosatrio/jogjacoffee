@@ -73,7 +73,7 @@ $font-serif: "Playfair Display", serif;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.4);
+    background-color: rgba($color: #000000, $alpha: 0.5);
     bottom: 0;
   }
 
@@ -107,7 +107,7 @@ $font-serif: "Playfair Display", serif;
   h2 {
     font-family: $font-serif;
     font-weight: 900;
-    color: $gray-700;
+    color: $green;
   }
   h5 {
     color: $gray-500;
@@ -122,7 +122,7 @@ $font-serif: "Playfair Display", serif;
   h2 {
     font-family: $font-serif;
     font-weight: 900;
-    color: $gray-700;
+    color: $green;
     padding-top: 30px;
   }
   p {
@@ -171,9 +171,9 @@ $font-serif: "Playfair Display", serif;
   font-size: 1.25rem;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
-  color: $primary;
+  color: $yellow;
   &:hover {
-    color: $info;
+    color: $white;
     text-decoration: none;
   }
 }
@@ -207,6 +207,7 @@ $font-serif: "Playfair Display", serif;
 
 // NAV
 .nav {
+  background-color: $green;
   font-family: "Poppins", sans-serif;
   padding: 12px 0;
 
@@ -214,13 +215,13 @@ $font-serif: "Playfair Display", serif;
     font-size: 1.05rem;
     &.active {
       a.nav-link {
-        color: $primary;
+        color: $white;
       }
     }
     a {
       &.nav-link {
         letter-spacing: 1px;
-        color: $gray-700;
+        color: $yellow;
         padding-left: 1rem;
         padding-right: 1rem;
         &:hover {
@@ -238,33 +239,40 @@ $font-serif: "Playfair Display", serif;
   font-weight: 900;
   margin-bottom: 60px;
   letter-spacing: 1pt;
-  color: $gray-600;
+  color: $green;
 }
 
 // FOOTER
 footer {
+  bottom: 0;
   border-top: 1px solid $gray-200;
   font-family: "Poppins", sans-serif;
   padding-top: 20px;
 
-  .brand-tagline {
+  h2.text-logo {
+    font-family: $font-serif;
+    font-weight: 900;
+    letter-spacing: 2pt;
+  }
+
+  .head-item {
     margin-top: 8px;
-    color: $gray-500;
-    font-weight: 300;
+    color: $secondary;
+    font-weight: 500;
   }
 
   .list-group-item {
     background-color: rgba(0, 0, 0, 0);
-    padding: 0.3125rem 20;
+    padding: 0.3125rem 0;
     border: 0;
     a,
     span {
-      color: $gray-500;
+      color: white;
       font-weight: 300;
     }
     a {
       @include hover-focus {
-        color: $gray-800;
+        color: $yellow;
       }
     }
   }
@@ -272,6 +280,16 @@ footer {
     font-size: 15px;
     margin: 20px 0;
     font-weight: 300;
-    color: $gray-500;
+    color: white;
+
+    a,
+    span {
+      color: $yellow;
+    }
+    a {
+      @include hover-focus {
+        color: salmon;
+      }
+    }
   }
 }

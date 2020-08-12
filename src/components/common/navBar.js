@@ -28,7 +28,7 @@ const NavBar = (props) => {
       {/* WHEN MD AND LARGER */}
       <div className="d-none d-md-block sticky-top">
         <ul
-          className="nav justify-content-around bg-white shadow-sm"
+          className="nav justify-content-around shadow-sm"
           style={{ paddingRight: 60, paddingLeft: 60 }}
         >
           <IconText className="my-auto pl-3">Jogja Coffee Fest</IconText>
@@ -48,7 +48,7 @@ const NavBar = (props) => {
 
       {/* WHEN SM AND SMALLER */}
       <div className="d-block d-md-none sticky-top">
-        <ul className="nav justify-content-around bg-white shadow-sm">
+        <ul className="nav justify-content-around shadow-sm">
           <IconText className="my-auto pl-3">Coffee Fest</IconText>
           <li className={`nav-item${getNavLinkClass("/katalog")}`}>
             <Button className="nav-link" type="link" href="/katalog">

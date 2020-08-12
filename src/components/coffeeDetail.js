@@ -4,7 +4,7 @@ const CoffeeDetail = (props) => {
   const { data } = props;
   return (
     <div className="col-md-10" ref={props.refInfoProduk}>
-      <h3 className="mb-4 text-gray-800">Product Information</h3>
+      <h3 className="mb-4 text-primary">Product Information</h3>
       <table className="table table-borderless table-sm">
         <tbody>
           <tr>

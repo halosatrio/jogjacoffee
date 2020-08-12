@@ -33,7 +33,7 @@ const ItemsProduct = ({ product }) => {
             <Button
               type="button"
               onClick={() => increase(product)}
-              className="btn btn-outline-primary btn-sm font-weight-light"
+              className="btn btn-outline-warning btn-sm"
               isBlock
             >
               Add more
@@ -44,7 +44,7 @@ const ItemsProduct = ({ product }) => {
             <Button
               type="button"
               onClick={() => addProduct(product)}
-              className="btn btn-primary btn-sm font-weight-light"
+              className="btn btn-warning btn-sm"
               isBlock
             >
               Add to cart

@@ -20,9 +20,8 @@ const Jumbotron = (props) => {
         <Button
           type="button"
           onClick={showRekomendasi}
-          className="btn px-5 py-2 font-weight-light"
+          className="btn btn-primary px-5 py-2"
           hasShadow
-          isPrimary
         >
           Start Your Coffee Journey!
         </Button>

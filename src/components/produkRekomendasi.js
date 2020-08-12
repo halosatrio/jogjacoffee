@@ -27,7 +27,7 @@ const ProdukRekomendasi = (props) => {
               </div>
               <div className="card-footer">
                 <Button
-                  className="btn btn-info stretched-link"
+                  className="btn btn-warning stretched-link"
                   type="link"
                   href={`/coffee/${item.id}`}
                   isBlock
