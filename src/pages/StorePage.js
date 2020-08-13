@@ -7,6 +7,7 @@ import ProdukTerbaru from "../components/produkTerbaru";
 import ProdukRekomendasi from "./../components/produkRekomendasi";
 import ProdukPilihan from "./../components/produkPilihan";
 import Jumbotron from "./../components/jumbotron";
+import Explore from "../components/explore";
 
 import { getRecommended, getPilihan, getTerbaru } from "../services/coffee";
 import { partner } from "../services/partner";
@@ -36,7 +37,7 @@ class StorePage extends Component {
         <NavBar {...this.props} />
         <Jumbotron refRekomendasi={this.refRekomendasi} />
         <BannerPartner items={partner} />
-        <section className="featured shadow-sm bg-white px-5">
+        <section className="featured shadow-sm bg-white">
           <ProdukRekomendasi
             refRekomendasi={this.refRekomendasi}
             items={recommended}
@@ -46,6 +47,7 @@ class StorePage extends Component {
           <hr />
           <ProdukPilihan items={pilihan} />
         </section>
+        <Explore />
         <Footer />
       </div>
     );

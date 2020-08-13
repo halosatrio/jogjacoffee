@@ -8,7 +8,6 @@ import TitleText from "../components/common/titleText";
 import { CartContext } from "./../context/CartContext";
 
 import React, { Component } from "react";
-import Button from "../components/common/button";
 
 class CartPage extends Component {
   static contextType = CartContext;
@@ -42,13 +41,12 @@ class CartPage extends Component {
             {checkout && (
               <div className="col-12 text-center text-orange">
                 <h5 className="mb-4">Checkout Success</h5>
-                <Button
-                  type="link"
+                <a
                   href="/"
                   className="btn btn-outline-warning btn-lg px-5 font-weight-bolder"
                 >
                   Back to Store
-                </Button>
+                </a>
               </div>
             )}
 

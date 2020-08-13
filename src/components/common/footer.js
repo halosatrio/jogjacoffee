@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="row justify-content-center mt-4 d-block d-md-none">
+        <div className="row justify-content-center mt-4 mb-2 d-block d-md-none">
           <div className="col text-center">
             <h6 className="head-item mb-3">Follow Us!</h6>
           </div>

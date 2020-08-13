@@ -47,7 +47,7 @@ const NavBar = (props) => {
       </div>
 
       {/* WHEN SM AND SMALLER */}
-      <div className="d-block d-md-none sticky-top">
+      <div className="d-none d-sm-block d-md-none sticky-top">
         <ul className="nav justify-content-around shadow-sm">
           <IconText className="my-auto pl-3">Coffee Fest</IconText>
           <li className={`nav-item${getNavLinkClass("/katalog")}`}>
@@ -58,6 +58,36 @@ const NavBar = (props) => {
           <li className={`nav-item${getNavLinkClass("/cart")}`}>
             <Button className="nav-link" type="link" href="/cart">
               <CartIcon width={"18px"} />
+              Cart ({itemCount})
+            </Button>
+          </li>
+        </ul>
+      </div>
+
+      {/* WHEN SM AND SMALLER */}
+      <div className="d-block d-sm-none sticky-top">
+        <ul className="nav justify-content-around shadow-sm">
+          <IconText className="my-auto px-3" style={{ fontSize: 16 }}>
+            Coffee Fest
+          </IconText>
+          <li className={`nav-item${getNavLinkClass("/katalog")}`}>
+            <Button
+              className="nav-link"
+              type="link"
+              href="/katalog"
+              style={{ fontSize: 14 }}
+            >
+              Catalogue
+            </Button>
+          </li>
+          <li className={`nav-item${getNavLinkClass("/cart")}`}>
+            <Button
+              className="nav-link"
+              type="link"
+              href="/cart"
+              style={{ fontSize: 14 }}
+            >
+              <CartIcon width={"14px"} />
               Cart ({itemCount})
             </Button>
           </li>

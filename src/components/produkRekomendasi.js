@@ -6,7 +6,7 @@ const ProdukRekomendasi = (props) => {
   const { items } = props;
 
   return (
-    <section ref={props.refRekomendasi}>
+    <section className="container rekomendasi" ref={props.refRekomendasi}>
       <h2 className="text-center mb-4">Recommended Products</h2>
       <div className="row justify-content-lg-between justify-content-center">
         {items.map((item) => (
@@ -22,8 +22,8 @@ const ProdukRekomendasi = (props) => {
               />
 
               <div className="card-body">
-                <p className="card-text">{item.name}</p>
-                <small className="text-muted align-bottom">{`Berat: ${item.weight}`}</small>
+                <h6>{item.name}</h6>
+                <p className="mt-5 mb-3 text-center">{`Weight: ${item.weight}`}</p>
               </div>
               <div className="card-footer">
                 <Button

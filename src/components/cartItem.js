@@ -29,7 +29,7 @@ const CartItem = () => {
               <h5 className="mb-2">{product.name}</h5>
             </Button>
             <p className="text-muted mb-1">
-              Price: {formatNumber(product.price)}
+              Price: Rp{formatNumber(product.price)}
             </p>
             <p className="mb-0">Quantity: {product.quantity}</p>
           </div>

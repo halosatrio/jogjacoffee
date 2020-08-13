@@ -13,7 +13,7 @@ const ItemsProduct = ({ product }) => {
   };
 
   return (
-    <div className="col mb-4">
+    <div className="col mb-4 px-2">
       <div className="card text-center h-100 shadow-sm">
         <Button type="link" href={`/coffee/${product.id}`}>
           <img
@@ -23,11 +23,11 @@ const ItemsProduct = ({ product }) => {
           />
         </Button>
         <div className="card-body">
-          <p>{product.name}</p>
-          <small className="text-muted align-bottom">{`Berat: ${product.weight}`}</small>
+          <h6>{product.name}</h6>
+          <p className="mt-4 mb-0">{`Weight: ${product.weight}`}</p>
         </div>
         <div className="card-footer">
-          <p>{formatNumber(product.price)}</p>
+          <p>Rp{formatNumber(product.price)}</p>
 
           {isInCart(product) && (
             <Button
@@ -36,7 +36,7 @@ const ItemsProduct = ({ product }) => {
               className="btn btn-outline-warning btn-sm"
               isBlock
             >
-              Add more
+              add more
             </Button>
           )}
 
@@ -47,7 +47,7 @@ const ItemsProduct = ({ product }) => {
               className="btn btn-warning btn-sm"
               isBlock
             >
-              Add to cart
+              add to cart
             </Button>
           )}
         </div>

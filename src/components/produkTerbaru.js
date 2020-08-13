@@ -4,11 +4,11 @@ import Button from "./common/button";
 
 const ProdukTerbaru = ({ items }) => {
   return (
-    <>
+    <section className="container">
       <h2 className="text-center mb-4">Latest Products</h2>
       <div className="row row-cols-2 row-cols-lg-4">
         {items.map((item) => (
-          <div key={item.id} className="col mb-4">
+          <div key={item.id} className="col mb-4 px-2">
             <div className="card shadow-sm text-center h-100">
               <img
                 src={item.imageUrl}
@@ -17,8 +17,8 @@ const ProdukTerbaru = ({ items }) => {
               />
 
               <div className="card-body">
-                <p className="card-text">{item.name}</p>
-                <small className="text-muted align-bottom">{`Berat: ${item.weight}`}</small>
+                <h6>{item.name}</h6>
+                <p className="mt-4 mb-0">{`Weight: ${item.weight}`}</p>
               </div>
               <div className="card-footer">
                 <Button
@@ -34,7 +34,7 @@ const ProdukTerbaru = ({ items }) => {
           </div>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

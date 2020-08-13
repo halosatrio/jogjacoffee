@@ -125,13 +125,44 @@ $font-serif: "Playfair Display", serif;
     color: $green;
     padding-top: 30px;
   }
-  p {
-    color: $gray-600;
-    font-weight: 300;
-    font-size: 12pt;
+  h6 {
+    color: $gray-700;
+    font-weight: 400;
+    font-size: 14px;
   }
-  small {
+  p {
+    font-size: 12px;
     font-weight: 300;
+    color: $gray-600;
+  }
+  .rekomendasi {
+    h6 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  a {
+    font-size: 14px;
+  }
+  hr {
+    margin: 0 40px;
+  }
+}
+
+.explore {
+  margin-bottom: 60px;
+  h3 {
+    font-family: $font-serif;
+    font-size: 3rem;
+    line-height: 130%;
+    font-weight: 900;
+    letter-spacing: 1pt;
+  }
+  a {
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 }
 
@@ -139,19 +170,21 @@ $font-serif: "Playfair Display", serif;
 
 /* KATALOG PAGE */
 .katalog {
-  padding: 0 30px;
-  p {
+  h6 {
     color: $gray-700;
     font-weight: 400;
-    font-size: 12pt;
+    font-size: 14px;
   }
-  small {
+  p {
+    font-size: 12px;
     font-weight: 300;
+    color: $gray-600;
   }
   .card-footer {
     p {
       color: $gray-700;
-      font-size: 0.9rem;
+      font-size: 14px;
+      font-weight: 500;
     }
   }
 }

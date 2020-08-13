@@ -17,7 +17,7 @@ const CartForm = () => {
         <p className="h4 mb-3">{itemCount}</p>
         <p className="mb-1">Total Payment</p>
         <p className="h3" style={{ fontSize: "1.5rem" }}>
-          {formatNumber(total)}
+          Rp{formatNumber(total)}
         </p>
         <hr className="my-4" />
         <div className="text-center">

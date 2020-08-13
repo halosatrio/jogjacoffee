@@ -35,7 +35,7 @@ const CoffeeBeli = (props) => {
         >
           Product Information
         </Button>
-        <h3 className="mb-3">Price: {formatNumber(data.price)}</h3>
+        <h3 className="mb-3">Price: Rp{formatNumber(data.price)}</h3>
         {isInCart(data) && (
           <Button
             type="button"
