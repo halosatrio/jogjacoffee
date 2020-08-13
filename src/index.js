@@ -3,15 +3,12 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-import { HelmetProvider } from "react-helmet-async";
 import CartContextProvider from "./context/CartContext";
 
 ReactDOM.render(
-  <HelmetProvider>
-    <CartContextProvider>
-      <App />
-    </CartContextProvider>
-  </HelmetProvider>,
+  <CartContextProvider>
+    <App />
+  </CartContextProvider>,
   document.getElementById("root")
 );
 
