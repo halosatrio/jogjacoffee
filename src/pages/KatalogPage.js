@@ -1,25 +1,25 @@
 import React, { Component } from "react";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import ItemsProduct from "../components/ItemsProduct";
 import TitleText from "../components/common/titleText";
 
+import { getCoffees } from "../store/actions";
 import { coffees } from "../services/coffee";
 
-class KatalogPage extends Component {
-  state = {
-    coffees,
-  };
-
+class ExamplePage extends Component {
   componentDidMount() {
     window.title = "Ngopi di Jogja | Detail Produk";
     window.scrollTo(0, 0);
+
+    this.props.getCoffees(coffees);
   }
 
   render() {
-    const { coffees } = this.state;
+    const { coffees } = this.props;
+
     return (
       <>
         <NavBar {...this.props} />
@@ -37,9 +37,10 @@ class KatalogPage extends Component {
   }
 }
 
-// const mapStateToProps = (state) => ({
-//   checkout: state.checkout,
-// });
+const mapStateToProps = (state) => {
+  return {
+    coffees: state.coffees,
+  };
+};
 
-export default KatalogPage;
-// export default connect(mapStateToProps)(KatalogPage);
+export default connect(mapStateToProps, { getCoffees })(ExamplePage);

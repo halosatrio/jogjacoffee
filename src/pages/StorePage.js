@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -9,8 +10,10 @@ import ProdukPilihan from "./../components/produkPilihan";
 import Jumbotron from "./../components/jumbotron";
 import Explore from "../components/explore";
 
-import { getRecommended, getPilihan, getTerbaru } from "../services/coffee";
+import { getCoffees } from "../store/actions";
+import { getPartner } from "../store/actions";
 import { partner } from "../services/partner";
+import { coffees } from "../services/coffee";
 
 class StorePage extends Component {
   constructor(props) {
@@ -18,20 +21,37 @@ class StorePage extends Component {
     this.refRekomendasi = React.createRef();
   }
 
-  state = {
-    recommended: getRecommended(),
-    pilihan: getPilihan(),
-    terbaru: getTerbaru(),
-    partner,
-  };
-
   componentDidMount() {
     window.title = "Ngopi di Jogja";
     window.scrollTo(0, 0);
+
+    this.props.getCoffees(coffees);
+    this.props.getPartner(partner);
   }
 
   render() {
-    const { partner, recommended, terbaru, pilihan } = this.state;
+    const { partner, coffees } = this.props;
+
+    const getRecommended = () => {
+      return coffees.filter((c) => c.isRecommended === true);
+    };
+
+    const getTerbaru = () => {
+      return coffees.filter((c) => c.isTerbaru === true);
+    };
+
+    const getPilihan = () => {
+      return coffees.filter((c) => c.isPilihan === true);
+    };
+
+    const pilihan = getPilihan(),
+      terbaru = getTerbaru(),
+      recommended = getRecommended();
+
+    console.log("rekomend:", recommended);
+    console.log("terbaru:", terbaru);
+    console.log("pilihan:", pilihan);
+
     return (
       <div className="store-page">
         <NavBar {...this.props} />
@@ -54,4 +74,11 @@ class StorePage extends Component {
   }
 }
 
-export default StorePage;
+const mapStateToProps = (state) => {
+  return {
+    coffees: state.coffees,
+    partner: state.partner,
+  };
+};
+
+export default connect(mapStateToProps, { getPartner, getCoffees })(StorePage);

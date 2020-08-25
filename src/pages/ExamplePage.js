@@ -3,73 +3,36 @@ import { connect } from "react-redux";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
-import BannerPartner from "./../components/bannerPartner";
-import ProdukTerbaru from "../components/produkTerbaru";
-import ProdukRekomendasi from "./../components/produkRekomendasi";
-import ProdukPilihan from "./../components/produkPilihan";
-import Jumbotron from "./../components/jumbotron";
-import Explore from "../components/explore";
+import ItemsProduct from "../components/ItemsProduct";
+import TitleText from "../components/common/titleText";
 
 import { getCoffees } from "../store/actions";
-import { getPartner } from "../store/actions";
-import { partner } from "../services/partner";
 import { coffees } from "../services/coffee";
 
 class ExamplePage extends Component {
-  constructor(props) {
-    super(props);
-    this.refRekomendasi = React.createRef();
-  }
-
   componentDidMount() {
-    window.title = "Ngopi di Jogja";
+    window.title = "Ngopi di Jogja | Detail Produk";
     window.scrollTo(0, 0);
 
     this.props.getCoffees(coffees);
-    this.props.getPartner(partner);
   }
 
   render() {
-    const { partner, coffees } = this.props;
-
-    const getRecommended = () => {
-      return coffees.filter((c) => c.isRecommended === true);
-    };
-
-    const getTerbaru = () => {
-      return coffees.filter((c) => c.isTerbaru === true);
-    };
-
-    const getPilihan = () => {
-      return coffees.filter((c) => c.isPilihan === true);
-    };
-
-    const pilihan = getPilihan(),
-      terbaru = getTerbaru(),
-      recommended = getRecommended();
-
-    console.log("rekomend:", recommended);
-    console.log("terbaru:", terbaru);
-    console.log("pilihan:", pilihan);
+    const { coffees } = this.props;
 
     return (
-      <div className="store-page">
+      <>
         <NavBar {...this.props} />
-        <Jumbotron refRekomendasi={this.refRekomendasi} />
-        <BannerPartner items={partner} />
-        <section className="featured shadow-sm bg-white">
-          <ProdukRekomendasi
-            refRekomendasi={this.refRekomendasi}
-            items={recommended}
-          />
-          <hr />
-          <ProdukTerbaru items={terbaru} />
-          <hr />
-          <ProdukPilihan items={pilihan} />
+        <TitleText className="mt-5 px-3">Products Catalogue</TitleText>
+        <section className="katalog container my-5">
+          <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 mb-3">
+            {coffees.map((product) => (
+              <ItemsProduct key={product.id} product={product} />
+            ))}
+          </div>
         </section>
-        <Explore />
         <Footer />
-      </div>
+      </>
     );
   }
 }
@@ -77,13 +40,10 @@ class ExamplePage extends Component {
 const mapStateToProps = (state) => {
   return {
     coffees: state.coffees,
-    partner: state.partner,
   };
 };
 
-export default connect(mapStateToProps, { getPartner, getCoffees })(
-  ExamplePage
-);
+export default connect(mapStateToProps, { getCoffees })(ExamplePage);
 
 // import React from "react";
 
