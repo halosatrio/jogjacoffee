@@ -1,13 +1,10 @@
-// import React, { useEffect, useContext } from "react";
-
+import React, { Component } from "react";
 import NavBar from "../components/common/navBar";
 import CartForm from "../components/cartForm";
 import CartItem from "../components/cartItem";
 import TitleText from "../components/common/titleText";
 
 import { CartContext } from "./../context/CartContext";
-
-import React, { Component } from "react";
 
 class CartPage extends Component {
   static contextType = CartContext;

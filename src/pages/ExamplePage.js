@@ -2,36 +2,82 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import NavBar from "../components/common/navBar";
-import Footer from "../components/common/footer";
-import ItemsProduct from "../components/ItemsProduct";
+// import CartForm from "../components/cartForm";
+import CartItem from "../components/cartItem";
 import TitleText from "../components/common/titleText";
-
-import { getCoffees } from "../store/actions";
-import { coffees } from "../services/coffee";
 
 class ExamplePage extends Component {
   componentDidMount() {
-    window.title = "Ngopi di Jogja | Detail Produk";
+    window.title = "Ngopi di Jogja";
     window.scrollTo(0, 0);
-
-    this.props.getCoffees(coffees);
   }
 
   render() {
-    const { coffees } = this.props;
-
+    const { cartItems } = this.props;
     return (
       <>
         <NavBar {...this.props} />
-        <TitleText className="mt-5 px-3">Products Catalogue</TitleText>
-        <section className="katalog container my-5">
-          <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 mb-3">
-            {coffees.map((product) => (
-              <ItemsProduct key={product.id} product={product} />
-            ))}
+
+        {/* CONTAINER WHEN SM AND LG */}
+        <div className="container body-cart my-5 d-md-none d-lg-block">
+          <TitleText>Cart</TitleText>
+          <div className="row">
+            {cartItems.length > 0 ? (
+              <div className="col-md-8 mb-4">
+                <CartItem cartItems={cartItems} />
+              </div>
+            ) : (
+              <div className="col-12 text-muted mb-5">
+                <h2 className="text-center">Your Cart is Empty</h2>
+              </div>
+            )}
+
+            {/* {checkout && (
+              <div className="col-12 text-center text-orange">
+                <h5 className="mb-4">Checkout Success</h5>
+                <a
+                  href="/"
+                  className="btn btn-outline-warning btn-lg px-5 font-weight-bolder"
+                >
+                  Back to Store
+                </a>
+              </div>
+            )} */}
+
+            {cartItems.length > 0 && (
+              <div className="col-md-4">{/* <CartForm /> */}</div>
+            )}
           </div>
-        </section>
-        <Footer />
+        </div>
+
+        {/* NO CONTAINER WHEN MD */}
+        <div className="body-cart my-5 px-4 d-none d-md-block d-lg-none">
+          <TitleText>Cart</TitleText>
+          <div className="row">
+            {cartItems.length > 0 ? (
+              <div className="col-md-8">
+                <CartItem cartItems={cartItems} />
+              </div>
+            ) : (
+              <div className="col-12 text-muted mb-5">
+                <h2 className="text-center">Your Cart is Empty</h2>
+              </div>
+            )}
+
+            {/* {checkout && (
+              <div className="col-12 text-center text-success">
+                <p>Checkout Success</p>
+                <a href="/" className="btn btn-outline-success">
+                  Back to Store
+                </a>
+              </div>
+            )} */}
+
+            {cartItems.length > 0 && (
+              <div className="col-md-4">{/* <CartForm /> */}</div>
+            )}
+          </div>
+        </div>
       </>
     );
   }
@@ -39,11 +85,11 @@ class ExamplePage extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    coffees: state.coffees,
+    cartItems: state.cartItems,
   };
 };
 
-export default connect(mapStateToProps, { getCoffees })(ExamplePage);
+export default connect(mapStateToProps)(ExamplePage);
 
 // import React from "react";
 

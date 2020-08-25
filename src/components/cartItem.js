@@ -1,16 +1,22 @@
-import React, { useContext } from "react";
+import React from "react";
+// import React, { Component } from "react";
 
 import Button from "./common/button";
 
-import { CartContext } from "../context/CartContext";
+// import { CartContext } from "../context/CartContext";
 import { formatNumber } from "../utils/numberFormat";
 
 import { PlusCircleIcon, MinusCircleIcon, TrashIcon } from "../assets/icons";
+import { connect } from "react-redux";
 
-const CartItem = () => {
-  const { cartItems, increase, decrease, removeProduct } = useContext(
-    CartContext
-  );
+import { increase, decrease } from "../store/actions";
+
+// class CartItem extends Component {
+const CartItem = (props) => {
+  // const { cartItems, increase, decrease, removeProduct } = useContext(
+  //   CartContext
+  // );
+  const { cartItems, increase, decrease } = props;
 
   return (
     <div>
@@ -34,17 +40,19 @@ const CartItem = () => {
             <p className="mb-0">Quantity: {product.quantity}</p>
           </div>
           <div className="col-4 col-sm-3 col-md-3 text-center">
-            <button
+            <Button
               onClick={() => increase(product)}
+              // onClick={() => console.log("INCREASE")}
               className="btn btn-secondary btn-sm mr-2 mb-1"
             >
               <PlusCircleIcon width={"20px"} />
-            </button>
+            </Button>
 
             {product.quantity > 1 && (
               <Button
                 type="button"
                 onClick={() => decrease(product)}
+                // onClick={() => console.log("DECREASE")}
                 className="btn btn-primary btn-sm mb-1"
               >
                 <MinusCircleIcon width={"20px"} />
@@ -54,7 +62,8 @@ const CartItem = () => {
             {product.quantity === 1 && (
               <Button
                 type="button"
-                onClick={() => removeProduct(product)}
+                // onClick={() => removeProduct(product)}
+                onClick={() => console.log("REMOVE")}
                 className="btn btn-primary btn-sm mb-1"
               >
                 <TrashIcon width={"20px"} />
@@ -67,4 +76,12 @@ const CartItem = () => {
   );
 };
 
-export default CartItem;
+const mapStateToProps = (state) => {
+  return {
+    cartItems: state.cartItems,
+  };
+};
+
+export default connect(mapStateToProps, { increase, decrease })(CartItem);
+
+// export default CartItem;
