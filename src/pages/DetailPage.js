@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
+import { actions } from "../store/reducer";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -61,7 +64,11 @@ class DetailPage extends Component {
               <CoffeeImage data={data} />
             </div>
             <div className="col-11 col-md-6 col-lg-6 col-xl-5">
-              <CoffeeBeli data={data} refInfoProduk={this.refInfoProduk} />
+              <CoffeeBeli
+                data={data}
+                refInfoProduk={this.refInfoProduk}
+                addProduct={this.props.onAddProduct}
+              />
             </div>
           </div>
           <CoffeeDetail data={data} refInfoProduk={this.refInfoProduk} />
@@ -72,4 +79,20 @@ class DetailPage extends Component {
   }
 }
 
-export default DetailPage;
+function mapStateToProps(state) {
+  return {
+    message: state.message,
+    newTodo: state.newTodo,
+    todos: state.todos,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onAddProduct(product) {
+      dispatch(actions.addProduct(product));
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DetailPage);

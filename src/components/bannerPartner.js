@@ -7,7 +7,7 @@ const BannerPartner = ({ items }) => {
         <h2 className="text-center mb-3">Our Coffee Partners</h2>
         <div className="row row-cols-2 row-cols-md-4">
           {items.map((item) => (
-            <div key={item.id} className="col mb-3">
+            <div key={item._id} className="col mb-3">
               <img
                 src={item.imageUrl}
                 alt={item.name}

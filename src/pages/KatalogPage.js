@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+// import { connect } from "react-redux";
+
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import ItemsProduct from "../components/ItemsProduct";
@@ -35,4 +37,9 @@ class KatalogPage extends Component {
   }
 }
 
+// const mapStateToProps = (state) => ({
+//   checkout: state.checkout,
+// });
+
 export default KatalogPage;
+// export default connect(mapStateToProps)(KatalogPage);

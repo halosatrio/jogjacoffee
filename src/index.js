@@ -1,14 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import store from "./store";
+
 import App from "./App";
+
 import * as serviceWorker from "./serviceWorker";
 
-import CartContextProvider from "./context/CartContext";
+// import CartContextProvider from "./context/CartContext";
 
 ReactDOM.render(
-  <CartContextProvider>
+  <Provider store={store}>
     <App />
-  </CartContextProvider>,
+  </Provider>,
   document.getElementById("root")
 );
 
