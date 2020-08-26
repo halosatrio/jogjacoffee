@@ -1,14 +1,20 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import Button from "./common/button";
 
-import { CartContext } from "../context/CartContext";
 import { formatNumber } from "../utils/numberFormat";
 
-const CartForm = () => {
-  const { total, itemCount, clearCart, handleCheckout } = useContext(
-    CartContext
+const CartForm = (props) => {
+  const { clearCart, handleCheckout, cartItems } = props;
+
+  let itemCount = cartItems.reduce(
+    (total, product) => total + product.quantity,
+    0
   );
+
+  let total = cartItems
+    .reduce((total, product) => total + product.price * product.quantity, 0)
+    .toFixed(2);
 
   return (
     <div className="card shadow-sm">

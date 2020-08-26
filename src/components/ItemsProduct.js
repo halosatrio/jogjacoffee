@@ -5,7 +5,7 @@ import Button from "./common/button";
 import { formatNumber } from "./../utils/numberFormat";
 
 const ItemsProduct = (props) => {
-  const { product, cartItems, addItem, increase } = props;
+  const { product, cartItems, addProduct, increase } = props;
 
   const isInCart = (product) => {
     return !!cartItems.find((item) => item.id === product.id);
@@ -42,7 +42,7 @@ const ItemsProduct = (props) => {
           {!isInCart(product) && (
             <Button
               type="button"
-              onClick={() => addItem(product)}
+              onClick={() => addProduct(product)}
               className="btn btn-warning btn-sm"
               isBlock
             >

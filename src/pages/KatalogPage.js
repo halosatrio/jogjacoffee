@@ -6,7 +6,7 @@ import Footer from "../components/common/footer";
 import ItemsProduct from "../components/ItemsProduct";
 import TitleText from "../components/common/titleText";
 
-import { getCoffees, addItem, increase } from "../store/actions";
+import { getCoffees, addProduct, increase } from "../store/actions";
 import { coffees } from "../services/coffee";
 
 class ExamplePage extends Component {
@@ -50,6 +50,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { getCoffees, addItem, increase })(
+export default connect(mapStateToProps, { getCoffees, addProduct, increase })(
   ExamplePage
 );

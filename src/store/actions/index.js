@@ -5,6 +5,8 @@ import {
   DECREASE,
   REMOVE_ITEM,
   ADD_ITEM,
+  CLEAR,
+  CHECKOUT,
 } from "../types";
 
 export function getCoffees(payload) {
@@ -21,7 +23,7 @@ export function getPartner(payload) {
   };
 }
 
-export function addItem(payload) {
+export function addProduct(payload) {
   return {
     type: ADD_ITEM,
     payload,
@@ -46,6 +48,19 @@ export function removeProduct(payload) {
   return {
     type: REMOVE_ITEM,
     payload,
+  };
+}
+
+export function handleCheckout() {
+  console.log("CHECKOUT");
+  return {
+    type: CHECKOUT,
+  };
+}
+
+export function clearCart() {
+  return {
+    type: CLEAR,
   };
 }
 

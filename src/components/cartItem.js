@@ -1,21 +1,11 @@
 import React from "react";
-// import React, { Component } from "react";
 
 import Button from "./common/button";
 
-// import { CartContext } from "../context/CartContext";
 import { formatNumber } from "../utils/numberFormat";
-
 import { PlusCircleIcon, MinusCircleIcon, TrashIcon } from "../assets/icons";
-import { connect } from "react-redux";
 
-import { increase, decrease } from "../store/actions";
-
-// class CartItem extends Component {
 const CartItem = (props) => {
-  // const { cartItems, increase, decrease, removeProduct } = useContext(
-  //   CartContext
-  // );
   const { cartItems, increase, decrease } = props;
 
   return (
@@ -42,7 +32,6 @@ const CartItem = (props) => {
           <div className="col-4 col-sm-3 col-md-3 text-center">
             <Button
               onClick={() => increase(product)}
-              // onClick={() => console.log("INCREASE")}
               className="btn btn-secondary btn-sm mr-2 mb-1"
             >
               <PlusCircleIcon width={"20px"} />
@@ -52,7 +41,6 @@ const CartItem = (props) => {
               <Button
                 type="button"
                 onClick={() => decrease(product)}
-                // onClick={() => console.log("DECREASE")}
                 className="btn btn-primary btn-sm mb-1"
               >
                 <MinusCircleIcon width={"20px"} />
@@ -76,12 +64,4 @@ const CartItem = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    cartItems: state.cartItems,
-  };
-};
-
-export default connect(mapStateToProps, { increase, decrease })(CartItem);
-
-// export default CartItem;
+export default CartItem;

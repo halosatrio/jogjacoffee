@@ -5,12 +5,15 @@ import {
   DECREASE,
   REMOVE_ITEM,
   ADD_ITEM,
+  CHECKOUT,
+  CLEAR,
 } from "../types";
 
 const initialState = {
   coffees: [],
   partner: [],
   cartItems: [],
+  checkout: false,
 };
 
 function rootReducer(state = initialState, action) {
@@ -35,7 +38,6 @@ function rootReducer(state = initialState, action) {
         quantity: 1,
       });
     }
-
     return {
       ...state,
       cartItems: [...state.cartItems],
@@ -68,6 +70,21 @@ function rootReducer(state = initialState, action) {
       cartItems: [
         ...state.cartItems.filter((item) => item.id !== action.payload.id),
       ],
+    };
+  }
+
+  if (action.type === CHECKOUT) {
+    return {
+      ...state,
+      cartItems: [],
+      checkout: true,
+    };
+  }
+
+  if (action.type === CLEAR) {
+    return {
+      ...state,
+      cartItems: [],
     };
   }
   return state;

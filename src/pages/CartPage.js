@@ -1,22 +1,29 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
 import NavBar from "../components/common/navBar";
 import CartForm from "../components/cartForm";
 import CartItem from "../components/cartItem";
 import TitleText from "../components/common/titleText";
 
-import { CartContext } from "./../context/CartContext";
+import { increase, decrease, handleCheckout } from "../store/actions";
 
 class CartPage extends Component {
-  static contextType = CartContext;
-
   componentDidMount() {
     window.title = "Ngopi di Jogja";
     window.scrollTo(0, 0);
   }
 
   render() {
-    const { cartItems, checkout } = this.context;
+    const {
+      cartItems,
+      increase,
+      decrease,
+      checkout,
+      handleCheckout,
+    } = this.props;
 
+    console.log(checkout);
     return (
       <>
         <NavBar {...this.props} />
@@ -27,7 +34,11 @@ class CartPage extends Component {
           <div className="row">
             {cartItems.length > 0 ? (
               <div className="col-md-8 mb-4">
-                <CartItem />
+                <CartItem
+                  cartItems={cartItems}
+                  increase={increase}
+                  decrease={decrease}
+                />
               </div>
             ) : (
               <div className="col-12 text-muted mb-5">
@@ -49,7 +60,10 @@ class CartPage extends Component {
 
             {cartItems.length > 0 && (
               <div className="col-md-4">
-                <CartForm />
+                <CartForm
+                  cartItems={cartItems}
+                  handleCheckout={handleCheckout}
+                />
               </div>
             )}
           </div>
@@ -61,7 +75,11 @@ class CartPage extends Component {
           <div className="row">
             {cartItems.length > 0 ? (
               <div className="col-md-8">
-                <CartItem />
+                <CartItem
+                  cartItems={cartItems}
+                  increase={increase}
+                  decrease={decrease}
+                />
               </div>
             ) : (
               <div className="col-12 text-muted mb-5">
@@ -80,7 +98,10 @@ class CartPage extends Component {
 
             {cartItems.length > 0 && (
               <div className="col-md-4">
-                <CartForm />
+                <CartForm
+                  cartItems={cartItems}
+                  handleCheckout={handleCheckout}
+                />
               </div>
             )}
           </div>
@@ -90,4 +111,13 @@ class CartPage extends Component {
   }
 }
 
-export default CartPage;
+const mapStateToProps = (state) => {
+  return {
+    cartItems: state.cartItems,
+    checkout: state.checkout,
+  };
+};
+
+export default connect(mapStateToProps, { increase, decrease, handleCheckout })(
+  CartPage
+);

@@ -1,10 +1,6 @@
-export const ADD_ARTICLE = "ADD_ARTICLE";
-
 export const COFFEES_LOADED = "COFFEES_LOADED";
 
 export const PARTNER_LOADED = "PARTNER_LOADED";
-
-export const FETCH_COFFEES = "FETCH_COFFEES";
 
 export const INCREASE = "INCREASE";
 
