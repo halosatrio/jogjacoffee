@@ -6,7 +6,13 @@ import CartForm from "../components/cartForm";
 import CartItem from "../components/cartItem";
 import TitleText from "../components/common/titleText";
 
-import { increase, decrease, handleCheckout } from "../store/actions";
+import {
+  increase,
+  decrease,
+  removeProduct,
+  handleCheckout,
+  clearCart,
+} from "../store/actions";
 
 class CartPage extends Component {
   componentDidMount() {
@@ -19,14 +25,15 @@ class CartPage extends Component {
       cartItems,
       increase,
       decrease,
+      removeProduct,
       checkout,
       handleCheckout,
+      clearCart,
     } = this.props;
 
-    console.log(checkout);
     return (
       <>
-        <NavBar {...this.props} />
+        <NavBar {...this.props} cartItems={cartItems} />
 
         {/* CONTAINER WHEN SM AND LG */}
         <div className="container body-cart my-5 d-md-none d-lg-block">
@@ -38,6 +45,7 @@ class CartPage extends Component {
                   cartItems={cartItems}
                   increase={increase}
                   decrease={decrease}
+                  removeProduct={removeProduct}
                 />
               </div>
             ) : (
@@ -63,6 +71,7 @@ class CartPage extends Component {
                 <CartForm
                   cartItems={cartItems}
                   handleCheckout={handleCheckout}
+                  clearCart={clearCart}
                 />
               </div>
             )}
@@ -79,6 +88,7 @@ class CartPage extends Component {
                   cartItems={cartItems}
                   increase={increase}
                   decrease={decrease}
+                  removeProduct={removeProduct}
                 />
               </div>
             ) : (
@@ -101,6 +111,7 @@ class CartPage extends Component {
                 <CartForm
                   cartItems={cartItems}
                   handleCheckout={handleCheckout}
+                  clearCart={clearCart}
                 />
               </div>
             )}
@@ -118,6 +129,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { increase, decrease, handleCheckout })(
-  CartPage
-);
+export default connect(mapStateToProps, {
+  increase,
+  decrease,
+  removeProduct,
+  handleCheckout,
+  clearCart,
+})(CartPage);

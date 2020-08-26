@@ -6,7 +6,7 @@ import { formatNumber } from "../utils/numberFormat";
 import { PlusCircleIcon, MinusCircleIcon, TrashIcon } from "../assets/icons";
 
 const CartItem = (props) => {
-  const { cartItems, increase, decrease } = props;
+  const { cartItems, increase, decrease, removeProduct } = props;
 
   return (
     <div>
@@ -50,8 +50,7 @@ const CartItem = (props) => {
             {product.quantity === 1 && (
               <Button
                 type="button"
-                // onClick={() => removeProduct(product)}
-                onClick={() => console.log("REMOVE")}
+                onClick={() => removeProduct(product)}
                 className="btn btn-primary btn-sm mb-1"
               >
                 <TrashIcon width={"20px"} />

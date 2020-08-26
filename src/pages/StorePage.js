@@ -30,7 +30,7 @@ class StorePage extends Component {
   }
 
   render() {
-    const { partner, coffees } = this.props;
+    const { partner, coffees, cartItems } = this.props;
 
     const getRecommended = () => {
       return coffees.filter((c) => c.isRecommended === true);
@@ -54,7 +54,7 @@ class StorePage extends Component {
 
     return (
       <div className="store-page">
-        <NavBar {...this.props} />
+        <NavBar {...this.props} cartItems={cartItems} />
         <Jumbotron refRekomendasi={this.refRekomendasi} />
         <BannerPartner items={partner} />
         <section className="featured shadow-sm bg-white">
@@ -78,6 +78,7 @@ const mapStateToProps = (state) => {
   return {
     coffees: state.coffees,
     partner: state.partner,
+    cartItems: state.cartItems,
   };
 };
 

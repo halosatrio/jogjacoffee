@@ -23,7 +23,6 @@ class ExamplePage extends Component {
       handleCheckout,
     } = this.props;
 
-    console.log(checkout);
     return (
       <>
         <NavBar {...this.props} />
