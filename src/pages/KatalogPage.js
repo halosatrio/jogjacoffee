@@ -6,7 +6,7 @@ import Footer from "../components/common/footer";
 import ItemsProduct from "../components/ItemsProduct";
 import TitleText from "../components/common/titleText";
 
-import { getCoffees } from "../store/actions";
+import { getCoffees, addItem, increase } from "../store/actions";
 import { coffees } from "../services/coffee";
 
 class ExamplePage extends Component {
@@ -18,7 +18,7 @@ class ExamplePage extends Component {
   }
 
   render() {
-    const { coffees } = this.props;
+    const { coffees, cartItems, addItem, increase } = this.props;
 
     return (
       <>
@@ -27,7 +27,13 @@ class ExamplePage extends Component {
         <section className="katalog container my-5">
           <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 mb-3">
             {coffees.map((product) => (
-              <ItemsProduct key={product.id} product={product} />
+              <ItemsProduct
+                key={product.id}
+                product={product}
+                cartItems={cartItems}
+                addItem={addItem}
+                increase={increase}
+              />
             ))}
           </div>
         </section>
@@ -40,7 +46,10 @@ class ExamplePage extends Component {
 const mapStateToProps = (state) => {
   return {
     coffees: state.coffees,
+    cartItems: state.cartItems,
   };
 };
 
-export default connect(mapStateToProps, { getCoffees })(ExamplePage);
+export default connect(mapStateToProps, { getCoffees, addItem, increase })(
+  ExamplePage
+);

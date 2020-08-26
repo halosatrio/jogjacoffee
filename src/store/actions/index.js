@@ -4,6 +4,7 @@ import {
   INCREASE,
   DECREASE,
   REMOVE_ITEM,
+  ADD_ITEM,
 } from "../types";
 
 export function getCoffees(payload) {
@@ -16,6 +17,13 @@ export function getCoffees(payload) {
 export function getPartner(payload) {
   return {
     type: PARTNER_LOADED,
+    payload,
+  };
+}
+
+export function addItem(payload) {
+  return {
+    type: ADD_ITEM,
     payload,
   };
 }
