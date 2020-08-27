@@ -1,6 +1,7 @@
 import {
   COFFEES_LOADED,
   PARTNER_LOADED,
+  GET_DETAIL,
   INCREASE,
   DECREASE,
   REMOVE_ITEM,
@@ -19,6 +20,13 @@ export function getCoffees(payload) {
 export function getPartner(payload) {
   return {
     type: PARTNER_LOADED,
+    payload,
+  };
+}
+
+export function getCoffeeDetail(payload) {
+  return {
+    type: GET_DETAIL,
     payload,
   };
 }

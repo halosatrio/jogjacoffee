@@ -48,10 +48,6 @@ class StorePage extends Component {
       terbaru = getTerbaru(),
       recommended = getRecommended();
 
-    console.log("rekomend:", recommended);
-    console.log("terbaru:", terbaru);
-    console.log("pilihan:", pilihan);
-
     return (
       <div className="store-page">
         <NavBar {...this.props} cartItems={cartItems} />

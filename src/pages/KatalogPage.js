@@ -9,7 +9,7 @@ import TitleText from "../components/common/titleText";
 import { getCoffees, addProduct, increase } from "../store/actions";
 import { coffees } from "../services/coffee";
 
-class ExamplePage extends Component {
+class KatalogPage extends Component {
   componentDidMount() {
     window.title = "Ngopi di Jogja | Detail Produk";
     window.scrollTo(0, 0);
@@ -51,5 +51,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, { getCoffees, addProduct, increase })(
-  ExamplePage
+  KatalogPage
 );

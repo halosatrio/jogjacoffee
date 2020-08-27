@@ -7,8 +7,6 @@ import App from "./App";
 
 import * as serviceWorker from "./serviceWorker";
 
-// import CartContextProvider from "./context/CartContext";
-
 ReactDOM.render(
   <Provider store={store}>
     <App />

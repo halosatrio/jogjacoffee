@@ -2,6 +2,8 @@ export const COFFEES_LOADED = "COFFEES_LOADED";
 
 export const PARTNER_LOADED = "PARTNER_LOADED";
 
+export const GET_DETAIL = "GET_DETAILS";
+
 export const INCREASE = "INCREASE";
 
 export const DECREASE = "DECREASE";

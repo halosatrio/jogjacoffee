@@ -7,12 +7,14 @@ import {
   ADD_ITEM,
   CHECKOUT,
   CLEAR,
+  GET_DETAIL,
 } from "../types";
 
 const initialState = {
   coffees: [],
   partner: [],
   cartItems: [],
+  coffeeDetail: [],
   checkout: false,
 };
 
@@ -28,6 +30,18 @@ function rootReducer(state = initialState, action) {
     return {
       ...state,
       partner: action.payload,
+    };
+  }
+
+  if (action.type === GET_DETAIL) {
+    if (state.coffees.find((c) => c.id === action.payload)) {
+      return {
+        ...state,
+        coffeeDetail: state.coffees.find((c) => c.id === action.payload),
+      };
+    }
+    return {
+      ...state,
     };
   }
 
